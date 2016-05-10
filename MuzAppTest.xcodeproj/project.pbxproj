@@ -1,0 +1,324 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5363BD5D1CE1E540007CAEAC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5363BD5C1CE1E540007CAEAC /* main.m */; };
+		5363BD601CE1E540007CAEAC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5363BD5F1CE1E540007CAEAC /* AppDelegate.m */; };
+		5363BD631CE1E540007CAEAC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5363BD621CE1E540007CAEAC /* ViewController.m */; };
+		5363BD661CE1E540007CAEAC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5363BD641CE1E540007CAEAC /* Main.storyboard */; };
+		5363BD691CE1E540007CAEAC /* MuzAppTest.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5363BD671CE1E540007CAEAC /* MuzAppTest.xcdatamodeld */; };
+		5363BD6B1CE1E540007CAEAC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5363BD6A1CE1E540007CAEAC /* Assets.xcassets */; };
+		5363BD6E1CE1E540007CAEAC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5363BD6C1CE1E540007CAEAC /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		5363BD581CE1E540007CAEAC /* MuzAppTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MuzAppTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5363BD5C1CE1E540007CAEAC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		5363BD5E1CE1E540007CAEAC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		5363BD5F1CE1E540007CAEAC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		5363BD611CE1E540007CAEAC /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		5363BD621CE1E540007CAEAC /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		5363BD651CE1E540007CAEAC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5363BD681CE1E540007CAEAC /* MuzAppTest.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MuzAppTest.xcdatamodel; sourceTree = "<group>"; };
+		5363BD6A1CE1E540007CAEAC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5363BD6D1CE1E540007CAEAC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		5363BD6F1CE1E540007CAEAC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5363BD551CE1E540007CAEAC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5363BD4F1CE1E540007CAEAC = {
+			isa = PBXGroup;
+			children = (
+				5363BD5A1CE1E540007CAEAC /* MuzAppTest */,
+				5363BD591CE1E540007CAEAC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5363BD591CE1E540007CAEAC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5363BD581CE1E540007CAEAC /* MuzAppTest.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5363BD5A1CE1E540007CAEAC /* MuzAppTest */ = {
+			isa = PBXGroup;
+			children = (
+				5363BD5E1CE1E540007CAEAC /* AppDelegate.h */,
+				5363BD5F1CE1E540007CAEAC /* AppDelegate.m */,
+				5363BD611CE1E540007CAEAC /* ViewController.h */,
+				5363BD621CE1E540007CAEAC /* ViewController.m */,
+				5363BD641CE1E540007CAEAC /* Main.storyboard */,
+				5363BD6A1CE1E540007CAEAC /* Assets.xcassets */,
+				5363BD6C1CE1E540007CAEAC /* LaunchScreen.storyboard */,
+				5363BD6F1CE1E540007CAEAC /* Info.plist */,
+				5363BD671CE1E540007CAEAC /* MuzAppTest.xcdatamodeld */,
+				5363BD5B1CE1E540007CAEAC /* Supporting Files */,
+			);
+			path = MuzAppTest;
+			sourceTree = "<group>";
+		};
+		5363BD5B1CE1E540007CAEAC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5363BD5C1CE1E540007CAEAC /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5363BD571CE1E540007CAEAC /* MuzAppTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5363BD721CE1E540007CAEAC /* Build configuration list for PBXNativeTarget "MuzAppTest" */;
+			buildPhases = (
+				5363BD541CE1E540007CAEAC /* Sources */,
+				5363BD551CE1E540007CAEAC /* Frameworks */,
+				5363BD561CE1E540007CAEAC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MuzAppTest;
+			productName = MuzAppTest;
+			productReference = 5363BD581CE1E540007CAEAC /* MuzAppTest.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5363BD501CE1E540007CAEAC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = igrampe;
+				TargetAttributes = {
+					5363BD571CE1E540007CAEAC = {
+						CreatedOnToolsVersion = 7.3;
+					};
+				};
+			};
+			buildConfigurationList = 5363BD531CE1E540007CAEAC /* Build configuration list for PBXProject "MuzAppTest" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5363BD4F1CE1E540007CAEAC;
+			productRefGroup = 5363BD591CE1E540007CAEAC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5363BD571CE1E540007CAEAC /* MuzAppTest */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5363BD561CE1E540007CAEAC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5363BD6E1CE1E540007CAEAC /* LaunchScreen.storyboard in Resources */,
+				5363BD6B1CE1E540007CAEAC /* Assets.xcassets in Resources */,
+				5363BD661CE1E540007CAEAC /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5363BD541CE1E540007CAEAC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5363BD691CE1E540007CAEAC /* MuzAppTest.xcdatamodeld in Sources */,
+				5363BD631CE1E540007CAEAC /* ViewController.m in Sources */,
+				5363BD601CE1E540007CAEAC /* AppDelegate.m in Sources */,
+				5363BD5D1CE1E540007CAEAC /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		5363BD641CE1E540007CAEAC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5363BD651CE1E540007CAEAC /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		5363BD6C1CE1E540007CAEAC /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5363BD6D1CE1E540007CAEAC /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5363BD701CE1E540007CAEAC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		5363BD711CE1E540007CAEAC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5363BD731CE1E540007CAEAC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = MuzAppTest/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.igrampe.MuzAppTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		5363BD741CE1E540007CAEAC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = MuzAppTest/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.igrampe.MuzAppTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5363BD531CE1E540007CAEAC /* Build configuration list for PBXProject "MuzAppTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5363BD701CE1E540007CAEAC /* Debug */,
+				5363BD711CE1E540007CAEAC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5363BD721CE1E540007CAEAC /* Build configuration list for PBXNativeTarget "MuzAppTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5363BD731CE1E540007CAEAC /* Debug */,
+				5363BD741CE1E540007CAEAC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		5363BD671CE1E540007CAEAC /* MuzAppTest.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				5363BD681CE1E540007CAEAC /* MuzAppTest.xcdatamodel */,
+			);
+			currentVersion = 5363BD681CE1E540007CAEAC /* MuzAppTest.xcdatamodel */;
+			path = MuzAppTest.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 5363BD501CE1E540007CAEAC /* Project object */;
+}
