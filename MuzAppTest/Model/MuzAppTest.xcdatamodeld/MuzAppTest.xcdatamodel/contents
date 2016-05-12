@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="10171" systemVersion="15E65" minimumToolsVersion="Automatic">
+    <entity name="MAHistoryItemObject" representedClassName="MAHistoryItemObject" syncable="YES">
+        <attribute name="query" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="queryDate" optional="YES" attributeType="Date" syncable="YES"/>
+    </entity>
+    <entity name="MATrackObject" representedClassName="MATrackObject" syncable="YES">
+        <attribute name="artistName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="artworkUrl" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="collectionName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="trackId" optional="YES" attributeType="Integer 32" defaultValueString="0" indexed="YES" syncable="YES"/>
+        <attribute name="trackName" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="MAHistoryItemObject" positionX="-63" positionY="-18" width="128" height="75"/>
+        <element name="MATrackObject" positionX="-54" positionY="9" width="128" height="120"/>
+    </elements>
+</model>

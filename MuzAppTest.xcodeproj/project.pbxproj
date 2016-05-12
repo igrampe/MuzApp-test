@@ -7,27 +7,106 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5363BD5D1CE1E540007CAEAC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5363BD5C1CE1E540007CAEAC /* main.m */; };
-		5363BD601CE1E540007CAEAC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5363BD5F1CE1E540007CAEAC /* AppDelegate.m */; };
-		5363BD631CE1E540007CAEAC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5363BD621CE1E540007CAEAC /* ViewController.m */; };
-		5363BD661CE1E540007CAEAC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5363BD641CE1E540007CAEAC /* Main.storyboard */; };
-		5363BD691CE1E540007CAEAC /* MuzAppTest.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5363BD671CE1E540007CAEAC /* MuzAppTest.xcdatamodeld */; };
-		5363BD6B1CE1E540007CAEAC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5363BD6A1CE1E540007CAEAC /* Assets.xcassets */; };
-		5363BD6E1CE1E540007CAEAC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5363BD6C1CE1E540007CAEAC /* LaunchScreen.storyboard */; };
+		5363BD841CE1ED7F007CAEAC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5363BD771CE1ED7F007CAEAC /* AppDelegate.m */; };
+		5363BD851CE1ED7F007CAEAC /* MuzAppTest.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5363BD791CE1ED7F007CAEAC /* MuzAppTest.xcdatamodeld */; };
+		5363BD861CE1ED7F007CAEAC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5363BD7C1CE1ED7F007CAEAC /* Assets.xcassets */; };
+		5363BD871CE1ED7F007CAEAC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5363BD7D1CE1ED7F007CAEAC /* LaunchScreen.storyboard */; };
+		5363BD881CE1ED7F007CAEAC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5363BD7F1CE1ED7F007CAEAC /* Main.storyboard */; };
+		5363BD8A1CE1ED7F007CAEAC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5363BD831CE1ED7F007CAEAC /* main.m */; };
+		5363BDAD1CE1F546007CAEAC /* APLBlocks.m in Sources */ = {isa = PBXBuildFile; fileRef = 5363BD8F1CE1F546007CAEAC /* APLBlocks.m */; };
+		5363BDAF1CE1F546007CAEAC /* APLFileSystem.m in Sources */ = {isa = PBXBuildFile; fileRef = 5363BD931CE1F546007CAEAC /* APLFileSystem.m */; };
+		5363BDB01CE1F546007CAEAC /* APLKeyboardHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 5363BD951CE1F546007CAEAC /* APLKeyboardHelper.m */; };
+		5363BDB11CE1F546007CAEAC /* APLPageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 5363BD971CE1F546007CAEAC /* APLPageControl.m */; };
+		5363BDB21CE1F546007CAEAC /* APLTextHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 5363BD991CE1F546007CAEAC /* APLTextHelper.m */; };
+		5363BDB31CE1F546007CAEAC /* APLView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5363BD9B1CE1F546007CAEAC /* APLView.m */; };
+		5363BDB41CE1F546007CAEAC /* NSNotificationCenter+APL.m in Sources */ = {isa = PBXBuildFile; fileRef = 5363BD9D1CE1F546007CAEAC /* NSNotificationCenter+APL.m */; };
+		5363BDB51CE1F546007CAEAC /* NSObject+APL.m in Sources */ = {isa = PBXBuildFile; fileRef = 5363BD9F1CE1F546007CAEAC /* NSObject+APL.m */; };
+		5363BDB61CE1F546007CAEAC /* NSString+Attributing.m in Sources */ = {isa = PBXBuildFile; fileRef = 5363BDA11CE1F546007CAEAC /* NSString+Attributing.m */; };
+		5363BDB71CE1F546007CAEAC /* NSString+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 5363BDA31CE1F546007CAEAC /* NSString+Utils.m */; };
+		5363BDB81CE1F546007CAEAC /* UIColor+APL.m in Sources */ = {isa = PBXBuildFile; fileRef = 5363BDA51CE1F546007CAEAC /* UIColor+APL.m */; };
+		5363BDB91CE1F546007CAEAC /* UIViewController+APL.m in Sources */ = {isa = PBXBuildFile; fileRef = 5363BDA71CE1F546007CAEAC /* UIViewController+APL.m */; };
+		5363BDBA1CE1F546007CAEAC /* APLServiceLocator.m in Sources */ = {isa = PBXBuildFile; fileRef = 5363BDAB1CE1F546007CAEAC /* APLServiceLocator.m */; };
+		5363BDE01CE1F98B007CAEAC /* MAHistoryItemObject+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 5363BDD41CE1F98B007CAEAC /* MAHistoryItemObject+CoreDataProperties.m */; };
+		5363BDE11CE1F98B007CAEAC /* MAHistoryItemObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 5363BDD61CE1F98B007CAEAC /* MAHistoryItemObject.m */; };
+		5363BDE21CE1F98B007CAEAC /* MAHistoryItemPonso.m in Sources */ = {isa = PBXBuildFile; fileRef = 5363BDD81CE1F98B007CAEAC /* MAHistoryItemPonso.m */; };
+		5363BDE31CE1F98B007CAEAC /* MATrackObject+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 5363BDDB1CE1F98B007CAEAC /* MATrackObject+CoreDataProperties.m */; };
+		5363BDE41CE1F98B007CAEAC /* MATrackObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 5363BDDD1CE1F98B007CAEAC /* MATrackObject.m */; };
+		5363BDE51CE1F98B007CAEAC /* MATrackPonso.m in Sources */ = {isa = PBXBuildFile; fileRef = 5363BDDF1CE1F98B007CAEAC /* MATrackPonso.m */; };
+		5389C5CA1CE50A81007C1F6C /* MAServiceComponentsAssembly.m in Sources */ = {isa = PBXBuildFile; fileRef = 5389C5C91CE50A81007C1F6C /* MAServiceComponentsAssembly.m */; };
+		5389C5D11CE50AED007C1F6C /* MAApiManagerImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = 5389C5D01CE50AED007C1F6C /* MAApiManagerImpl.m */; };
+		5389C5D41CE50B98007C1F6C /* MADataManagerImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = 5389C5D31CE50B98007C1F6C /* MADataManagerImpl.m */; };
+		53D79B8F1CE25DE9007AD071 /* MAAppAssembly.m in Sources */ = {isa = PBXBuildFile; fileRef = 53D79B8E1CE25DE9007AD071 /* MAAppAssembly.m */; };
+		53D79B971CE26044007AD071 /* MAModuleAssembly.m in Sources */ = {isa = PBXBuildFile; fileRef = 53D79B961CE26044007AD071 /* MAModuleAssembly.m */; };
+		7AEDD6BAA2F80D41D008E693 /* libPods-MuzAppTest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 891E4FE868F86452627AE8C3 /* libPods-MuzAppTest.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3590D739725411D00ED1FCCD /* Pods-MuzAppTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MuzAppTest.release.xcconfig"; path = "Pods/Target Support Files/Pods-MuzAppTest/Pods-MuzAppTest.release.xcconfig"; sourceTree = "<group>"; };
 		5363BD581CE1E540007CAEAC /* MuzAppTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MuzAppTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		5363BD5C1CE1E540007CAEAC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		5363BD5E1CE1E540007CAEAC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		5363BD5F1CE1E540007CAEAC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		5363BD611CE1E540007CAEAC /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		5363BD621CE1E540007CAEAC /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		5363BD651CE1E540007CAEAC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		5363BD681CE1E540007CAEAC /* MuzAppTest.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MuzAppTest.xcdatamodel; sourceTree = "<group>"; };
-		5363BD6A1CE1E540007CAEAC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		5363BD6D1CE1E540007CAEAC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		5363BD6F1CE1E540007CAEAC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5363BD761CE1ED7F007CAEAC /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		5363BD771CE1ED7F007CAEAC /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		5363BD7A1CE1ED7F007CAEAC /* MuzAppTest.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MuzAppTest.xcdatamodel; sourceTree = "<group>"; };
+		5363BD7C1CE1ED7F007CAEAC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5363BD7E1CE1ED7F007CAEAC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		5363BD801CE1ED7F007CAEAC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5363BD821CE1ED7F007CAEAC /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5363BD831CE1ED7F007CAEAC /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		5363BD8E1CE1F546007CAEAC /* APLBlocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APLBlocks.h; sourceTree = "<group>"; };
+		5363BD8F1CE1F546007CAEAC /* APLBlocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APLBlocks.m; sourceTree = "<group>"; };
+		5363BD921CE1F546007CAEAC /* APLFileSystem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APLFileSystem.h; sourceTree = "<group>"; };
+		5363BD931CE1F546007CAEAC /* APLFileSystem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APLFileSystem.m; sourceTree = "<group>"; };
+		5363BD941CE1F546007CAEAC /* APLKeyboardHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APLKeyboardHelper.h; sourceTree = "<group>"; };
+		5363BD951CE1F546007CAEAC /* APLKeyboardHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APLKeyboardHelper.m; sourceTree = "<group>"; };
+		5363BD961CE1F546007CAEAC /* APLPageControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APLPageControl.h; sourceTree = "<group>"; };
+		5363BD971CE1F546007CAEAC /* APLPageControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APLPageControl.m; sourceTree = "<group>"; };
+		5363BD981CE1F546007CAEAC /* APLTextHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APLTextHelper.h; sourceTree = "<group>"; };
+		5363BD991CE1F546007CAEAC /* APLTextHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APLTextHelper.m; sourceTree = "<group>"; };
+		5363BD9A1CE1F546007CAEAC /* APLView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APLView.h; sourceTree = "<group>"; };
+		5363BD9B1CE1F546007CAEAC /* APLView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APLView.m; sourceTree = "<group>"; };
+		5363BD9C1CE1F546007CAEAC /* NSNotificationCenter+APL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNotificationCenter+APL.h"; sourceTree = "<group>"; };
+		5363BD9D1CE1F546007CAEAC /* NSNotificationCenter+APL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNotificationCenter+APL.m"; sourceTree = "<group>"; };
+		5363BD9E1CE1F546007CAEAC /* NSObject+APL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+APL.h"; sourceTree = "<group>"; };
+		5363BD9F1CE1F546007CAEAC /* NSObject+APL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+APL.m"; sourceTree = "<group>"; };
+		5363BDA01CE1F546007CAEAC /* NSString+Attributing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Attributing.h"; sourceTree = "<group>"; };
+		5363BDA11CE1F546007CAEAC /* NSString+Attributing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Attributing.m"; sourceTree = "<group>"; };
+		5363BDA21CE1F546007CAEAC /* NSString+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Utils.h"; sourceTree = "<group>"; };
+		5363BDA31CE1F546007CAEAC /* NSString+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Utils.m"; sourceTree = "<group>"; };
+		5363BDA41CE1F546007CAEAC /* UIColor+APL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+APL.h"; sourceTree = "<group>"; };
+		5363BDA51CE1F546007CAEAC /* UIColor+APL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+APL.m"; sourceTree = "<group>"; };
+		5363BDA61CE1F546007CAEAC /* UIViewController+APL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+APL.h"; sourceTree = "<group>"; };
+		5363BDA71CE1F546007CAEAC /* UIViewController+APL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+APL.m"; sourceTree = "<group>"; };
+		5363BDA91CE1F546007CAEAC /* APLInteractorProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APLInteractorProtocol.h; sourceTree = "<group>"; };
+		5363BDAA1CE1F546007CAEAC /* APLServiceLocator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APLServiceLocator.h; sourceTree = "<group>"; };
+		5363BDAB1CE1F546007CAEAC /* APLServiceLocator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APLServiceLocator.m; sourceTree = "<group>"; };
+		5363BDAC1CE1F546007CAEAC /* APLWireframeProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APLWireframeProtocol.h; sourceTree = "<group>"; };
+		5363BDD31CE1F98B007CAEAC /* MAHistoryItemObject+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MAHistoryItemObject+CoreDataProperties.h"; sourceTree = "<group>"; };
+		5363BDD41CE1F98B007CAEAC /* MAHistoryItemObject+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MAHistoryItemObject+CoreDataProperties.m"; sourceTree = "<group>"; };
+		5363BDD51CE1F98B007CAEAC /* MAHistoryItemObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MAHistoryItemObject.h; sourceTree = "<group>"; };
+		5363BDD61CE1F98B007CAEAC /* MAHistoryItemObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAHistoryItemObject.m; sourceTree = "<group>"; };
+		5363BDD71CE1F98B007CAEAC /* MAHistoryItemPonso.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MAHistoryItemPonso.h; sourceTree = "<group>"; };
+		5363BDD81CE1F98B007CAEAC /* MAHistoryItemPonso.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAHistoryItemPonso.m; sourceTree = "<group>"; };
+		5363BDDA1CE1F98B007CAEAC /* MATrackObject+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MATrackObject+CoreDataProperties.h"; sourceTree = "<group>"; };
+		5363BDDB1CE1F98B007CAEAC /* MATrackObject+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MATrackObject+CoreDataProperties.m"; sourceTree = "<group>"; };
+		5363BDDC1CE1F98B007CAEAC /* MATrackObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MATrackObject.h; sourceTree = "<group>"; };
+		5363BDDD1CE1F98B007CAEAC /* MATrackObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MATrackObject.m; sourceTree = "<group>"; };
+		5363BDDE1CE1F98B007CAEAC /* MATrackPonso.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MATrackPonso.h; sourceTree = "<group>"; };
+		5363BDDF1CE1F98B007CAEAC /* MATrackPonso.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MATrackPonso.m; sourceTree = "<group>"; };
+		5389C5C71CE50A73007C1F6C /* MAServiceComponents.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MAServiceComponents.h; sourceTree = "<group>"; };
+		5389C5C81CE50A81007C1F6C /* MAServiceComponentsAssembly.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MAServiceComponentsAssembly.h; sourceTree = "<group>"; };
+		5389C5C91CE50A81007C1F6C /* MAServiceComponentsAssembly.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAServiceComponentsAssembly.m; sourceTree = "<group>"; };
+		5389C5CC1CE50ACE007C1F6C /* MAApiManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MAApiManager.h; sourceTree = "<group>"; };
+		5389C5CE1CE50ACE007C1F6C /* MADataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MADataManager.h; sourceTree = "<group>"; };
+		5389C5CF1CE50AED007C1F6C /* MAApiManagerImpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MAApiManagerImpl.h; sourceTree = "<group>"; };
+		5389C5D01CE50AED007C1F6C /* MAApiManagerImpl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAApiManagerImpl.m; sourceTree = "<group>"; };
+		5389C5D21CE50B98007C1F6C /* MADataManagerImpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MADataManagerImpl.h; sourceTree = "<group>"; };
+		5389C5D31CE50B98007C1F6C /* MADataManagerImpl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MADataManagerImpl.m; sourceTree = "<group>"; };
+		53D79B8C1CE2543E007AD071 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		53D79B8D1CE25DE9007AD071 /* MAAppAssembly.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MAAppAssembly.h; sourceTree = "<group>"; };
+		53D79B8E1CE25DE9007AD071 /* MAAppAssembly.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAAppAssembly.m; sourceTree = "<group>"; };
+		53D79B951CE26044007AD071 /* MAModuleAssembly.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MAModuleAssembly.h; sourceTree = "<group>"; };
+		53D79B961CE26044007AD071 /* MAModuleAssembly.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAModuleAssembly.m; sourceTree = "<group>"; };
+		891E4FE868F86452627AE8C3 /* libPods-MuzAppTest.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MuzAppTest.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E46259827F94A378E7FE5C9C /* Pods-MuzAppTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MuzAppTest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MuzAppTest/Pods-MuzAppTest.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,17 +114,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7AEDD6BAA2F80D41D008E693 /* libPods-MuzAppTest.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		25D1CA51A26B1FFD91310652 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E46259827F94A378E7FE5C9C /* Pods-MuzAppTest.debug.xcconfig */,
+				3590D739725411D00ED1FCCD /* Pods-MuzAppTest.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		5363BD4F1CE1E540007CAEAC = {
 			isa = PBXGroup;
 			children = (
 				5363BD5A1CE1E540007CAEAC /* MuzAppTest */,
 				5363BD591CE1E540007CAEAC /* Products */,
+				25D1CA51A26B1FFD91310652 /* Pods */,
+				C56549DDDB33690F19DCADF5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,26 +151,198 @@
 		5363BD5A1CE1E540007CAEAC /* MuzAppTest */ = {
 			isa = PBXGroup;
 			children = (
-				5363BD5E1CE1E540007CAEAC /* AppDelegate.h */,
-				5363BD5F1CE1E540007CAEAC /* AppDelegate.m */,
-				5363BD611CE1E540007CAEAC /* ViewController.h */,
-				5363BD621CE1E540007CAEAC /* ViewController.m */,
-				5363BD641CE1E540007CAEAC /* Main.storyboard */,
-				5363BD6A1CE1E540007CAEAC /* Assets.xcassets */,
-				5363BD6C1CE1E540007CAEAC /* LaunchScreen.storyboard */,
-				5363BD6F1CE1E540007CAEAC /* Info.plist */,
-				5363BD671CE1E540007CAEAC /* MuzAppTest.xcdatamodeld */,
-				5363BD5B1CE1E540007CAEAC /* Supporting Files */,
+				53D79B941CE2602D007AD071 /* Base */,
+				5363BDBB1CE1F559007CAEAC /* Managers */,
+				5363BD8B1CE1F546007CAEAC /* Modules */,
+				5363BD8C1CE1F546007CAEAC /* Vendor */,
+				5363BD751CE1ED7F007CAEAC /* App */,
+				5363BD781CE1ED7F007CAEAC /* Model */,
+				5363BD7B1CE1ED7F007CAEAC /* Resources */,
+				5363BD811CE1ED7F007CAEAC /* Supporting Files */,
 			);
 			path = MuzAppTest;
 			sourceTree = "<group>";
 		};
-		5363BD5B1CE1E540007CAEAC /* Supporting Files */ = {
+		5363BD751CE1ED7F007CAEAC /* App */ = {
 			isa = PBXGroup;
 			children = (
-				5363BD5C1CE1E540007CAEAC /* main.m */,
+				5363BD761CE1ED7F007CAEAC /* AppDelegate.h */,
+				5363BD771CE1ED7F007CAEAC /* AppDelegate.m */,
+				53D79B8D1CE25DE9007AD071 /* MAAppAssembly.h */,
+				53D79B8E1CE25DE9007AD071 /* MAAppAssembly.m */,
 			);
-			name = "Supporting Files";
+			path = App;
+			sourceTree = "<group>";
+		};
+		5363BD781CE1ED7F007CAEAC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5363BD791CE1ED7F007CAEAC /* MuzAppTest.xcdatamodeld */,
+				5363BDD21CE1F98B007CAEAC /* MAHistoryItem */,
+				5363BDD91CE1F98B007CAEAC /* MATrack */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5363BD7B1CE1ED7F007CAEAC /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				5363BD7C1CE1ED7F007CAEAC /* Assets.xcassets */,
+				5363BD7D1CE1ED7F007CAEAC /* LaunchScreen.storyboard */,
+				5363BD7F1CE1ED7F007CAEAC /* Main.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		5363BD811CE1ED7F007CAEAC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				53D79B8C1CE2543E007AD071 /* PrefixHeader.pch */,
+				5363BD821CE1ED7F007CAEAC /* Info.plist */,
+				5363BD831CE1ED7F007CAEAC /* main.m */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5363BD8B1CE1F546007CAEAC /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		5363BD8C1CE1F546007CAEAC /* Vendor */ = {
+			isa = PBXGroup;
+			children = (
+				5363BD8D1CE1F546007CAEAC /* APL */,
+			);
+			path = Vendor;
+			sourceTree = "<group>";
+		};
+		5363BD8D1CE1F546007CAEAC /* APL */ = {
+			isa = PBXGroup;
+			children = (
+				5363BD8E1CE1F546007CAEAC /* APLBlocks.h */,
+				5363BD8F1CE1F546007CAEAC /* APLBlocks.m */,
+				5363BD921CE1F546007CAEAC /* APLFileSystem.h */,
+				5363BD931CE1F546007CAEAC /* APLFileSystem.m */,
+				5363BD941CE1F546007CAEAC /* APLKeyboardHelper.h */,
+				5363BD951CE1F546007CAEAC /* APLKeyboardHelper.m */,
+				5363BD961CE1F546007CAEAC /* APLPageControl.h */,
+				5363BD971CE1F546007CAEAC /* APLPageControl.m */,
+				5363BD981CE1F546007CAEAC /* APLTextHelper.h */,
+				5363BD991CE1F546007CAEAC /* APLTextHelper.m */,
+				5363BD9A1CE1F546007CAEAC /* APLView.h */,
+				5363BD9B1CE1F546007CAEAC /* APLView.m */,
+				5363BD9C1CE1F546007CAEAC /* NSNotificationCenter+APL.h */,
+				5363BD9D1CE1F546007CAEAC /* NSNotificationCenter+APL.m */,
+				5363BD9E1CE1F546007CAEAC /* NSObject+APL.h */,
+				5363BD9F1CE1F546007CAEAC /* NSObject+APL.m */,
+				5363BDA01CE1F546007CAEAC /* NSString+Attributing.h */,
+				5363BDA11CE1F546007CAEAC /* NSString+Attributing.m */,
+				5363BDA21CE1F546007CAEAC /* NSString+Utils.h */,
+				5363BDA31CE1F546007CAEAC /* NSString+Utils.m */,
+				5363BDA41CE1F546007CAEAC /* UIColor+APL.h */,
+				5363BDA51CE1F546007CAEAC /* UIColor+APL.m */,
+				5363BDA61CE1F546007CAEAC /* UIViewController+APL.h */,
+				5363BDA71CE1F546007CAEAC /* UIViewController+APL.m */,
+				5363BDA81CE1F546007CAEAC /* VIPER */,
+			);
+			path = APL;
+			sourceTree = "<group>";
+		};
+		5363BDA81CE1F546007CAEAC /* VIPER */ = {
+			isa = PBXGroup;
+			children = (
+				5363BDA91CE1F546007CAEAC /* APLInteractorProtocol.h */,
+				5363BDAA1CE1F546007CAEAC /* APLServiceLocator.h */,
+				5363BDAB1CE1F546007CAEAC /* APLServiceLocator.m */,
+				5363BDAC1CE1F546007CAEAC /* APLWireframeProtocol.h */,
+			);
+			path = VIPER;
+			sourceTree = "<group>";
+		};
+		5363BDBB1CE1F559007CAEAC /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				5389C5CB1CE50ACE007C1F6C /* ApiManager */,
+				5389C5CD1CE50ACE007C1F6C /* DataManager */,
+				5389C5C61CE50A73007C1F6C /* ServiceComponents */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		5363BDD21CE1F98B007CAEAC /* MAHistoryItem */ = {
+			isa = PBXGroup;
+			children = (
+				5363BDD31CE1F98B007CAEAC /* MAHistoryItemObject+CoreDataProperties.h */,
+				5363BDD41CE1F98B007CAEAC /* MAHistoryItemObject+CoreDataProperties.m */,
+				5363BDD51CE1F98B007CAEAC /* MAHistoryItemObject.h */,
+				5363BDD61CE1F98B007CAEAC /* MAHistoryItemObject.m */,
+				5363BDD71CE1F98B007CAEAC /* MAHistoryItemPonso.h */,
+				5363BDD81CE1F98B007CAEAC /* MAHistoryItemPonso.m */,
+			);
+			path = MAHistoryItem;
+			sourceTree = "<group>";
+		};
+		5363BDD91CE1F98B007CAEAC /* MATrack */ = {
+			isa = PBXGroup;
+			children = (
+				5363BDDA1CE1F98B007CAEAC /* MATrackObject+CoreDataProperties.h */,
+				5363BDDB1CE1F98B007CAEAC /* MATrackObject+CoreDataProperties.m */,
+				5363BDDC1CE1F98B007CAEAC /* MATrackObject.h */,
+				5363BDDD1CE1F98B007CAEAC /* MATrackObject.m */,
+				5363BDDE1CE1F98B007CAEAC /* MATrackPonso.h */,
+				5363BDDF1CE1F98B007CAEAC /* MATrackPonso.m */,
+			);
+			path = MATrack;
+			sourceTree = "<group>";
+		};
+		5389C5C61CE50A73007C1F6C /* ServiceComponents */ = {
+			isa = PBXGroup;
+			children = (
+				5389C5C71CE50A73007C1F6C /* MAServiceComponents.h */,
+				5389C5C81CE50A81007C1F6C /* MAServiceComponentsAssembly.h */,
+				5389C5C91CE50A81007C1F6C /* MAServiceComponentsAssembly.m */,
+			);
+			path = ServiceComponents;
+			sourceTree = "<group>";
+		};
+		5389C5CB1CE50ACE007C1F6C /* ApiManager */ = {
+			isa = PBXGroup;
+			children = (
+				5389C5CC1CE50ACE007C1F6C /* MAApiManager.h */,
+				5389C5CF1CE50AED007C1F6C /* MAApiManagerImpl.h */,
+				5389C5D01CE50AED007C1F6C /* MAApiManagerImpl.m */,
+			);
+			path = ApiManager;
+			sourceTree = "<group>";
+		};
+		5389C5CD1CE50ACE007C1F6C /* DataManager */ = {
+			isa = PBXGroup;
+			children = (
+				5389C5CE1CE50ACE007C1F6C /* MADataManager.h */,
+				5389C5D21CE50B98007C1F6C /* MADataManagerImpl.h */,
+				5389C5D31CE50B98007C1F6C /* MADataManagerImpl.m */,
+			);
+			path = DataManager;
+			sourceTree = "<group>";
+		};
+		53D79B941CE2602D007AD071 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				53D79B951CE26044007AD071 /* MAModuleAssembly.h */,
+				53D79B961CE26044007AD071 /* MAModuleAssembly.m */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		C56549DDDB33690F19DCADF5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				891E4FE868F86452627AE8C3 /* libPods-MuzAppTest.a */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -89,9 +352,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5363BD721CE1E540007CAEAC /* Build configuration list for PBXNativeTarget "MuzAppTest" */;
 			buildPhases = (
+				629C115957D4E7CA51AC9D0F /* Check Pods Manifest.lock */,
 				5363BD541CE1E540007CAEAC /* Sources */,
 				5363BD551CE1E540007CAEAC /* Frameworks */,
 				5363BD561CE1E540007CAEAC /* Resources */,
+				780EC3C5305198B3916D1486 /* Embed Pods Frameworks */,
+				15F8F91522276CB5EE63B3F5 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -108,6 +374,7 @@
 		5363BD501CE1E540007CAEAC /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = MA;
 				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = igrampe;
 				TargetAttributes = {
@@ -139,43 +406,114 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5363BD6E1CE1E540007CAEAC /* LaunchScreen.storyboard in Resources */,
-				5363BD6B1CE1E540007CAEAC /* Assets.xcassets in Resources */,
-				5363BD661CE1E540007CAEAC /* Main.storyboard in Resources */,
+				5363BD881CE1ED7F007CAEAC /* Main.storyboard in Resources */,
+				5363BD861CE1ED7F007CAEAC /* Assets.xcassets in Resources */,
+				5363BD871CE1ED7F007CAEAC /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		15F8F91522276CB5EE63B3F5 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MuzAppTest/Pods-MuzAppTest-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		629C115957D4E7CA51AC9D0F /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		780EC3C5305198B3916D1486 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MuzAppTest/Pods-MuzAppTest-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		5363BD541CE1E540007CAEAC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5363BD691CE1E540007CAEAC /* MuzAppTest.xcdatamodeld in Sources */,
-				5363BD631CE1E540007CAEAC /* ViewController.m in Sources */,
-				5363BD601CE1E540007CAEAC /* AppDelegate.m in Sources */,
-				5363BD5D1CE1E540007CAEAC /* main.m in Sources */,
+				5363BDE41CE1F98B007CAEAC /* MATrackObject.m in Sources */,
+				5363BDAF1CE1F546007CAEAC /* APLFileSystem.m in Sources */,
+				5363BDB21CE1F546007CAEAC /* APLTextHelper.m in Sources */,
+				5363BDE51CE1F98B007CAEAC /* MATrackPonso.m in Sources */,
+				5363BDE31CE1F98B007CAEAC /* MATrackObject+CoreDataProperties.m in Sources */,
+				5389C5D11CE50AED007C1F6C /* MAApiManagerImpl.m in Sources */,
+				5389C5D41CE50B98007C1F6C /* MADataManagerImpl.m in Sources */,
+				5363BDE01CE1F98B007CAEAC /* MAHistoryItemObject+CoreDataProperties.m in Sources */,
+				5363BDBA1CE1F546007CAEAC /* APLServiceLocator.m in Sources */,
+				5363BDB01CE1F546007CAEAC /* APLKeyboardHelper.m in Sources */,
+				5363BDB61CE1F546007CAEAC /* NSString+Attributing.m in Sources */,
+				5363BDB41CE1F546007CAEAC /* NSNotificationCenter+APL.m in Sources */,
+				53D79B8F1CE25DE9007AD071 /* MAAppAssembly.m in Sources */,
+				5363BDB91CE1F546007CAEAC /* UIViewController+APL.m in Sources */,
+				5363BD851CE1ED7F007CAEAC /* MuzAppTest.xcdatamodeld in Sources */,
+				5363BDAD1CE1F546007CAEAC /* APLBlocks.m in Sources */,
+				5363BD8A1CE1ED7F007CAEAC /* main.m in Sources */,
+				5363BDB11CE1F546007CAEAC /* APLPageControl.m in Sources */,
+				5389C5CA1CE50A81007C1F6C /* MAServiceComponentsAssembly.m in Sources */,
+				5363BDE21CE1F98B007CAEAC /* MAHistoryItemPonso.m in Sources */,
+				5363BDB51CE1F546007CAEAC /* NSObject+APL.m in Sources */,
+				53D79B971CE26044007AD071 /* MAModuleAssembly.m in Sources */,
+				5363BDB31CE1F546007CAEAC /* APLView.m in Sources */,
+				5363BD841CE1ED7F007CAEAC /* AppDelegate.m in Sources */,
+				5363BDB81CE1F546007CAEAC /* UIColor+APL.m in Sources */,
+				5363BDB71CE1F546007CAEAC /* NSString+Utils.m in Sources */,
+				5363BDE11CE1F98B007CAEAC /* MAHistoryItemObject.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		5363BD641CE1E540007CAEAC /* Main.storyboard */ = {
+		5363BD7D1CE1ED7F007CAEAC /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				5363BD651CE1E540007CAEAC /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		5363BD6C1CE1E540007CAEAC /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				5363BD6D1CE1E540007CAEAC /* Base */,
+				5363BD7E1CE1ED7F007CAEAC /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		5363BD7F1CE1ED7F007CAEAC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5363BD801CE1ED7F007CAEAC /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -265,9 +603,12 @@
 		};
 		5363BD731CE1E540007CAEAC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E46259827F94A378E7FE5C9C /* Pods-MuzAppTest.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = MuzAppTest/Info.plist;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MuzAppTest/Supporting Files/PrefixHeader.pch";
+				INFOPLIST_FILE = "$(SRCROOT)/MuzAppTest/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.igrampe.MuzAppTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -276,9 +617,12 @@
 		};
 		5363BD741CE1E540007CAEAC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3590D739725411D00ED1FCCD /* Pods-MuzAppTest.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = MuzAppTest/Info.plist;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MuzAppTest/Supporting Files/PrefixHeader.pch";
+				INFOPLIST_FILE = "$(SRCROOT)/MuzAppTest/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.igrampe.MuzAppTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -304,16 +648,17 @@
 				5363BD741CE1E540007CAEAC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		5363BD671CE1E540007CAEAC /* MuzAppTest.xcdatamodeld */ = {
+		5363BD791CE1ED7F007CAEAC /* MuzAppTest.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				5363BD681CE1E540007CAEAC /* MuzAppTest.xcdatamodel */,
+				5363BD7A1CE1ED7F007CAEAC /* MuzAppTest.xcdatamodel */,
 			);
-			currentVersion = 5363BD681CE1E540007CAEAC /* MuzAppTest.xcdatamodel */;
+			currentVersion = 5363BD7A1CE1ED7F007CAEAC /* MuzAppTest.xcdatamodel */;
 			path = MuzAppTest.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
