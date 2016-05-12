@@ -25,7 +25,7 @@
         <!--Search-->
         <scene sceneID="jFi-hO-ZC9">
             <objects>
-                <viewController storyboardIdentifier="VCSearch" title="Search" id="e1d-49-peb" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="VCSearch" title="Search" id="e1d-49-peb" customClass="MASearchViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="lm3-Ad-LGx"/>
                         <viewControllerLayoutGuide type="bottom" id="rcz-qf-F61"/>
@@ -41,11 +41,11 @@
                                 </constraints>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="50" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="34d-DT-hSR" userLabel="Search Results Table View">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="50.5" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="34d-DT-hSR" userLabel="Search Results Table View">
                                 <rect key="frame" x="0.0" y="108" width="600" height="492"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="50" id="Z2b-oR-3ni">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MASearchResultCell" rowHeight="50" id="Z2b-oR-3ni" customClass="MASearchResultCell">
                                         <rect key="frame" x="0.0" y="28" width="600" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Z2b-oR-3ni" id="xna-dc-cwp">
@@ -71,7 +71,7 @@
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Artist Name - Album Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ocl-mK-YQs" userLabel="Artist Label">
                                                             <rect key="frame" x="0.0" y="25" width="174" height="17"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <color key="textColor" red="0.59215686270000001" green="0.59215686270000001" blue="0.59215686270000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
@@ -96,8 +96,17 @@
                                                 <constraint firstItem="ojn-X1-GMJ" firstAttribute="top" secondItem="xna-dc-cwp" secondAttribute="top" id="wOm-xu-ct2"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="artistLabel" destination="ocl-mK-YQs" id="De3-yV-ht5"/>
+                                            <outlet property="coverView" destination="ojn-X1-GMJ" id="q1d-wI-waY"/>
+                                            <outlet property="titleLabel" destination="OLt-hn-CGv" id="33J-BO-Mbg"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="e1d-49-peb" id="Etz-fK-gqt"/>
+                                    <outlet property="delegate" destination="e1d-49-peb" id="vvA-JK-8pA"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -113,6 +122,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="1hs-hP-M8c"/>
                     <connections>
+                        <outlet property="searchBar" destination="L2c-Pp-t66" id="l6A-BP-6ud"/>
+                        <outlet property="tableView" destination="34d-DT-hSR" id="jhB-eM-1d0"/>
                         <segue destination="i73-Bh-m9j" kind="show" identifier="ShowTrack" id="WEx-Xz-1gA"/>
                     </connections>
                 </viewController>

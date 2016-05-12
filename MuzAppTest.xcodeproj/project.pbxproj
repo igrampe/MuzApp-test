@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		48AB507657B7B282B370CD34 /* MASearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5E5B67B052F4987EC92251C /* MASearchViewController.m */; };
 		5363BD841CE1ED7F007CAEAC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5363BD771CE1ED7F007CAEAC /* AppDelegate.m */; };
 		5363BD851CE1ED7F007CAEAC /* MuzAppTest.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5363BD791CE1ED7F007CAEAC /* MuzAppTest.xcdatamodeld */; };
 		5363BD861CE1ED7F007CAEAC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5363BD7C1CE1ED7F007CAEAC /* Assets.xcassets */; };
@@ -35,13 +36,26 @@
 		5389C5CA1CE50A81007C1F6C /* MAServiceComponentsAssembly.m in Sources */ = {isa = PBXBuildFile; fileRef = 5389C5C91CE50A81007C1F6C /* MAServiceComponentsAssembly.m */; };
 		5389C5D11CE50AED007C1F6C /* MAApiManagerImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = 5389C5D01CE50AED007C1F6C /* MAApiManagerImpl.m */; };
 		5389C5D41CE50B98007C1F6C /* MADataManagerImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = 5389C5D31CE50B98007C1F6C /* MADataManagerImpl.m */; };
+		5389C5DB1CE5131D007C1F6C /* MASearchResultCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5389C5DA1CE5131D007C1F6C /* MASearchResultCell.m */; };
+		5389C5DE1CE51331007C1F6C /* MASearchResultCellObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 5389C5DD1CE51331007C1F6C /* MASearchResultCellObject.m */; };
 		53D79B8F1CE25DE9007AD071 /* MAAppAssembly.m in Sources */ = {isa = PBXBuildFile; fileRef = 53D79B8E1CE25DE9007AD071 /* MAAppAssembly.m */; };
 		53D79B971CE26044007AD071 /* MAModuleAssembly.m in Sources */ = {isa = PBXBuildFile; fileRef = 53D79B961CE26044007AD071 /* MAModuleAssembly.m */; };
+		5BFB20E6FEB8A35D7B398924 /* MASearchPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 4975F45F3DC330B0F22C74A6 /* MASearchPresenter.m */; };
 		7AEDD6BAA2F80D41D008E693 /* libPods-MuzAppTest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 891E4FE868F86452627AE8C3 /* libPods-MuzAppTest.a */; };
+		8ED1ACE1AA3A9F8036C05716 /* MASearchRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = AAE708D8CFF17F5F487AF016 /* MASearchRouter.m */; };
+		C82DC4F28C43436A2390D8C6 /* MASearchInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 528287E9B268C0F31528CD06 /* MASearchInteractor.m */; };
+		F9839424819C4AB2E25635D2 /* MASearchAssembly.m in Sources */ = {isa = PBXBuildFile; fileRef = 72152CBF8CA03FCAF78C684F /* MASearchAssembly.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		106E73398CC834ABA66325A7 /* MASearchRouterInput.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = MASearchRouterInput.h; sourceTree = "<group>"; };
+		1472B8D35AFF0926736F7407 /* MASearchModuleOutput.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = MASearchModuleOutput.h; sourceTree = "<group>"; };
+		16D0689678E990AB656ACBD5 /* MASearchModuleInput.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = MASearchModuleInput.h; sourceTree = "<group>"; };
 		3590D739725411D00ED1FCCD /* Pods-MuzAppTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MuzAppTest.release.xcconfig"; path = "Pods/Target Support Files/Pods-MuzAppTest/Pods-MuzAppTest.release.xcconfig"; sourceTree = "<group>"; };
+		3A0D1E007BE88701B7ED963D /* MASearchRouter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = MASearchRouter.h; sourceTree = "<group>"; };
+		4975F45F3DC330B0F22C74A6 /* MASearchPresenter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = MASearchPresenter.m; sourceTree = "<group>"; };
+		4D252B9A637B5D0C90F2BA3B /* MASearchInteractorInput.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = MASearchInteractorInput.h; sourceTree = "<group>"; };
+		528287E9B268C0F31528CD06 /* MASearchInteractor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = MASearchInteractor.m; sourceTree = "<group>"; };
 		5363BD581CE1E540007CAEAC /* MuzAppTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MuzAppTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5363BD761CE1ED7F007CAEAC /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		5363BD771CE1ED7F007CAEAC /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -100,13 +114,27 @@
 		5389C5D01CE50AED007C1F6C /* MAApiManagerImpl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAApiManagerImpl.m; sourceTree = "<group>"; };
 		5389C5D21CE50B98007C1F6C /* MADataManagerImpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MADataManagerImpl.h; sourceTree = "<group>"; };
 		5389C5D31CE50B98007C1F6C /* MADataManagerImpl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MADataManagerImpl.m; sourceTree = "<group>"; };
+		5389C5D91CE5131D007C1F6C /* MASearchResultCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASearchResultCell.h; sourceTree = "<group>"; };
+		5389C5DA1CE5131D007C1F6C /* MASearchResultCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASearchResultCell.m; sourceTree = "<group>"; };
+		5389C5DC1CE51331007C1F6C /* MASearchResultCellObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASearchResultCellObject.h; sourceTree = "<group>"; };
+		5389C5DD1CE51331007C1F6C /* MASearchResultCellObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASearchResultCellObject.m; sourceTree = "<group>"; };
 		53D79B8C1CE2543E007AD071 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		53D79B8D1CE25DE9007AD071 /* MAAppAssembly.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MAAppAssembly.h; sourceTree = "<group>"; };
 		53D79B8E1CE25DE9007AD071 /* MAAppAssembly.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAAppAssembly.m; sourceTree = "<group>"; };
 		53D79B951CE26044007AD071 /* MAModuleAssembly.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MAModuleAssembly.h; sourceTree = "<group>"; };
 		53D79B961CE26044007AD071 /* MAModuleAssembly.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAModuleAssembly.m; sourceTree = "<group>"; };
+		5BB24FE0A07CC39D1669C10C /* MASearchViewOutput.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = MASearchViewOutput.h; sourceTree = "<group>"; };
+		602B32F5AB5020DEDF07C0B7 /* MASearchAssembly.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = MASearchAssembly.h; sourceTree = "<group>"; };
+		6F46116553D708FBAD1852E1 /* MASearchViewInput.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = MASearchViewInput.h; sourceTree = "<group>"; };
+		72152CBF8CA03FCAF78C684F /* MASearchAssembly.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = MASearchAssembly.m; sourceTree = "<group>"; };
 		891E4FE868F86452627AE8C3 /* libPods-MuzAppTest.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MuzAppTest.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F01CD26C88B9A7290D6A59E /* MASearchViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = MASearchViewController.h; sourceTree = "<group>"; };
+		AAE708D8CFF17F5F487AF016 /* MASearchRouter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = MASearchRouter.m; sourceTree = "<group>"; };
+		B8ED997B4D9B95652EB2A704 /* MASearchPresenter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = MASearchPresenter.h; sourceTree = "<group>"; };
+		C600C336F1BC1D9FBB27EB40 /* MASearchInteractorOutput.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = MASearchInteractorOutput.h; sourceTree = "<group>"; };
 		E46259827F94A378E7FE5C9C /* Pods-MuzAppTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MuzAppTest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MuzAppTest/Pods-MuzAppTest.debug.xcconfig"; sourceTree = "<group>"; };
+		E5E5B67B052F4987EC92251C /* MASearchViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = MASearchViewController.m; sourceTree = "<group>"; };
+		E847AB5834FFECD46F797EB4 /* MASearchInteractor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = MASearchInteractor.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +149,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0DD36D2420B0B8A695FBB814 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				16D0689678E990AB656ACBD5 /* MASearchModuleInput.h */,
+				1472B8D35AFF0926736F7407 /* MASearchModuleOutput.h */,
+				B8ED997B4D9B95652EB2A704 /* MASearchPresenter.h */,
+				4975F45F3DC330B0F22C74A6 /* MASearchPresenter.m */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
 		25D1CA51A26B1FFD91310652 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -128,6 +167,15 @@
 				3590D739725411D00ED1FCCD /* Pods-MuzAppTest.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		2CA4E3E0BCC21BFA1591309B /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				602B32F5AB5020DEDF07C0B7 /* MASearchAssembly.h */,
+				72152CBF8CA03FCAF78C684F /* MASearchAssembly.m */,
+			);
+			path = Assembly;
 			sourceTree = "<group>";
 		};
 		5363BD4F1CE1E540007CAEAC = {
@@ -207,6 +255,7 @@
 		5363BD8B1CE1F546007CAEAC /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				84617AF046CE8DE641FD4A21 /* Search */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -328,6 +377,17 @@
 			path = DataManager;
 			sourceTree = "<group>";
 		};
+		5389C5D81CE5131D007C1F6C /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				5389C5D91CE5131D007C1F6C /* MASearchResultCell.h */,
+				5389C5DA1CE5131D007C1F6C /* MASearchResultCell.m */,
+				5389C5DC1CE51331007C1F6C /* MASearchResultCellObject.h */,
+				5389C5DD1CE51331007C1F6C /* MASearchResultCellObject.m */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		53D79B941CE2602D007AD071 /* Base */ = {
 			isa = PBXGroup;
 			children = (
@@ -337,12 +397,57 @@
 			path = Base;
 			sourceTree = "<group>";
 		};
+		84617AF046CE8DE641FD4A21 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				2CA4E3E0BCC21BFA1591309B /* Assembly */,
+				C1C579FD651C2524B41AB5C1 /* View */,
+				0DD36D2420B0B8A695FBB814 /* Presenter */,
+				E214A54967838261F33D8E02 /* Interactor */,
+				F1C9776978E0A93620C0934F /* Router */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		C1C579FD651C2524B41AB5C1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5389C5D81CE5131D007C1F6C /* Cell */,
+				6F46116553D708FBAD1852E1 /* MASearchViewInput.h */,
+				5BB24FE0A07CC39D1669C10C /* MASearchViewOutput.h */,
+				9F01CD26C88B9A7290D6A59E /* MASearchViewController.h */,
+				E5E5B67B052F4987EC92251C /* MASearchViewController.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		C56549DDDB33690F19DCADF5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				891E4FE868F86452627AE8C3 /* libPods-MuzAppTest.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E214A54967838261F33D8E02 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				4D252B9A637B5D0C90F2BA3B /* MASearchInteractorInput.h */,
+				C600C336F1BC1D9FBB27EB40 /* MASearchInteractorOutput.h */,
+				E847AB5834FFECD46F797EB4 /* MASearchInteractor.h */,
+				528287E9B268C0F31528CD06 /* MASearchInteractor.m */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		F1C9776978E0A93620C0934F /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				106E73398CC834ABA66325A7 /* MASearchRouterInput.h */,
+				3A0D1E007BE88701B7ED963D /* MASearchRouter.h */,
+				AAE708D8CFF17F5F487AF016 /* MASearchRouter.m */,
+			);
+			path = Router;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -476,6 +581,7 @@
 				5389C5D41CE50B98007C1F6C /* MADataManagerImpl.m in Sources */,
 				5363BDE01CE1F98B007CAEAC /* MAHistoryItemObject+CoreDataProperties.m in Sources */,
 				5363BDBA1CE1F546007CAEAC /* APLServiceLocator.m in Sources */,
+				5389C5DE1CE51331007C1F6C /* MASearchResultCellObject.m in Sources */,
 				5363BDB01CE1F546007CAEAC /* APLKeyboardHelper.m in Sources */,
 				5363BDB61CE1F546007CAEAC /* NSString+Attributing.m in Sources */,
 				5363BDB41CE1F546007CAEAC /* NSNotificationCenter+APL.m in Sources */,
@@ -494,6 +600,12 @@
 				5363BDB81CE1F546007CAEAC /* UIColor+APL.m in Sources */,
 				5363BDB71CE1F546007CAEAC /* NSString+Utils.m in Sources */,
 				5363BDE11CE1F98B007CAEAC /* MAHistoryItemObject.m in Sources */,
+				F9839424819C4AB2E25635D2 /* MASearchAssembly.m in Sources */,
+				48AB507657B7B282B370CD34 /* MASearchViewController.m in Sources */,
+				5389C5DB1CE5131D007C1F6C /* MASearchResultCell.m in Sources */,
+				5BFB20E6FEB8A35D7B398924 /* MASearchPresenter.m in Sources */,
+				C82DC4F28C43436A2390D8C6 /* MASearchInteractor.m in Sources */,
+				8ED1ACE1AA3A9F8036C05716 /* MASearchRouter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
