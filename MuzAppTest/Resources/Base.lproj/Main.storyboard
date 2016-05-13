@@ -40,10 +40,18 @@
                                     <constraint firstAttribute="height" constant="44" id="Oru-Bj-S2E"/>
                                 </constraints>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="e1d-49-peb" id="lMA-gq-kLD"/>
+                                </connections>
                             </searchBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="50.5" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="34d-DT-hSR" userLabel="Search Results Table View">
                                 <rect key="frame" x="0.0" y="108" width="600" height="492"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <view key="tableFooterView" contentMode="scaleToFill" id="k9t-3g-JGp" userLabel="Footer">
+                                    <rect key="frame" x="0.0" y="78" width="600" height="0.0"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </view>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MASearchResultCell" rowHeight="50" id="Z2b-oR-3ni" customClass="MASearchResultCell">
                                         <rect key="frame" x="0.0" y="28" width="600" height="50"/>
@@ -125,6 +133,7 @@
                         <outlet property="searchBar" destination="L2c-Pp-t66" id="l6A-BP-6ud"/>
                         <outlet property="tableView" destination="34d-DT-hSR" id="jhB-eM-1d0"/>
                         <segue destination="i73-Bh-m9j" kind="show" identifier="ShowTrack" id="WEx-Xz-1gA"/>
+                        <segue destination="vLM-Wk-Ifa" kind="custom" identifier="OpenHistory" customClass="MASearchSegueOpenHistory" id="6Xh-9q-Vhj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1fX-jY-Hgj" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -201,7 +210,7 @@
         <!--History-->
         <scene sceneID="KXw-aK-h2h">
             <objects>
-                <viewController title="History" id="vLM-Wk-Ifa" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HistoryVC" title="History" id="vLM-Wk-Ifa" customClass="MAHistoryViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="SAX-06-KSz"/>
                         <viewControllerLayoutGuide type="bottom" id="ujm-xI-W3K"/>
@@ -213,9 +222,41 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Vmv-ca-vVa">
                                 <rect key="frame" x="0.0" y="20" width="600" height="580"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <view key="tableFooterView" contentMode="scaleToFill" id="0Uc-tJ-lqg" userLabel="Footer">
+                                    <rect key="frame" x="0.0" y="72" width="600" height="0.0"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </view>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MAHistoryItemCell" id="9Ig-H4-7SN" customClass="MAHistoryItemCell">
+                                        <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9Ig-H4-7SN" id="Gvg-cl-bg1">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Query" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hf1-i5-sKG">
+                                                    <rect key="frame" x="16" y="12" width="47" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Hf1-i5-sKG" firstAttribute="leading" secondItem="Gvg-cl-bg1" secondAttribute="leading" constant="16" id="6Zu-FB-SEt"/>
+                                                <constraint firstItem="Hf1-i5-sKG" firstAttribute="centerY" secondItem="Gvg-cl-bg1" secondAttribute="centerY" id="8TP-cX-P4a"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Hf1-i5-sKG" secondAttribute="trailing" constant="16" id="Pq9-Zk-FTC"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="vLM-Wk-Ifa" id="cba-S2-h0t"/>
+                                    <outlet property="delegate" destination="vLM-Wk-Ifa" id="ddG-aI-ODV"/>
+                                </connections>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.5" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Vmv-ca-vVa" firstAttribute="top" secondItem="SAX-06-KSz" secondAttribute="bottom" id="Fhd-zU-8o3"/>
                             <constraint firstItem="Vmv-ca-vVa" firstAttribute="leading" secondItem="POL-Rz-e6R" secondAttribute="leading" id="NAu-0f-H1q"/>
@@ -223,10 +264,13 @@
                             <constraint firstAttribute="trailing" secondItem="Vmv-ca-vVa" secondAttribute="trailing" id="os8-zS-nHv"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="Vmv-ca-vVa" id="WNv-Y3-mnm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ii8-CU-wBW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="827" y="1055"/>
+            <point key="canvasLocation" x="827" y="1106"/>
         </scene>
     </scenes>
 </document>

@@ -32,6 +32,17 @@
     }
 }
 
+- (void)actionSearchBarTextDidChange
+{
+    if ([self.view valueSearchBarText].length == 0)
+    {
+        [self.router openHistoryModule];
+    } else
+    {
+        [self.router closeHistoryModule];
+    }
+}
+
 #pragma mark - MASearchInteractorOutput
 
 @end

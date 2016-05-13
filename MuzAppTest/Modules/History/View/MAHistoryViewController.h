@@ -8,12 +8,13 @@
 
 
 #import <UIKit/UIKit.h>
+#import "MAModuleViewController.h"
 
 #import "MAHistoryViewInput.h"
 
 @protocol MAHistoryViewOutput;
 
-@interface MAHistoryViewController : UIViewController <MAHistoryViewInput>
+@interface MAHistoryViewController : MAModuleViewController <MAHistoryViewInput>
 
 @property (nonatomic, strong) id<MAHistoryViewOutput> output;
 

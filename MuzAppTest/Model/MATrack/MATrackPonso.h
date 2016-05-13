@@ -10,4 +10,10 @@
 
 @interface MATrackPonso : NSObject
 
+@property (nonatomic, strong) NSNumber *trackId;
+@property (nonatomic, strong) NSString *artistName;
+@property (nonatomic, strong) NSString *trackName;
+@property (nonatomic, strong) NSString *collectionName;
+@property (nonatomic, strong) NSString *artworkUrl;
+
 @end

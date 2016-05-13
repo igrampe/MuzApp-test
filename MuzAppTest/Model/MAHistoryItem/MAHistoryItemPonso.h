@@ -10,4 +10,7 @@
 
 @interface MAHistoryItemPonso : NSObject
 
+@property (nonatomic, strong) NSString *query;
+@property (nonatomic, strong) NSDate *queryDate;
+
 @end

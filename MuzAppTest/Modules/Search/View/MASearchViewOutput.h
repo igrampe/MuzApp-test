@@ -13,5 +13,6 @@
 
 - (void)viewWillAppear;
 - (void)actionSearchBarActivate;
+- (void)actionSearchBarTextDidChange;
 
 @end

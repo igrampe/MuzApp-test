@@ -8,11 +8,12 @@
 
 #import "APLKeyboardHelper.h"
 #import "NSNotificationCenter+APL.h"
+#import <UIKit/UIKit.h>
 
-@interface APLKeyboardHelper : NSObject
+@interface APLKeyboardHelper ()
 
-@property NSMutableDictionary *handlers;
-@property NSArray *notificationNames;
+@property (nonatomic, strong) NSMutableDictionary *handlers;
+@property (nonatomic, strong) NSArray *notificationNames;
 
 @end
 
@@ -21,6 +22,11 @@
 - (void)dealloc
 {
     [NOTIFICATION_CENTER removeObserver:self];
+}
+
++ (instancetype)helper
+{
+    return [self sharedObject];
 }
 
 + (instancetype)sharedObject
@@ -88,6 +94,14 @@
     NSDictionary *info = [notification userInfo];
     CGSize size = [info[UIKeyboardFrameEndUserInfoKey] CGRectValue].size;
     double duration = [info[UIKeyboardAnimationDurationUserInfoKey] doubleValue];
+    self.keyboardSize = size;
+    if ([notification.name isEqualToString:UIKeyboardWillShowNotification])
+    {
+        self.hasKeyboard = YES;
+    } else if ([notification.name isEqualToString:UIKeyboardWillHideNotification])
+    {
+        self.hasKeyboard = YES;
+    }
     NSMutableDictionary *hs = [self.handlers objectForKey:notification.name];
     for (APLKeyboardHelperHandler handler in [hs allValues])
     {

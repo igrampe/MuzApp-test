@@ -24,3 +24,12 @@ typedef void(^APLKeyboardHelperHandler)(CGSize keyboardSize, double duration);
 - (void)cancelHandlingKeyboard;
 
 @end
+
+@interface APLKeyboardHelper : NSObject
+
+@property (nonatomic, assign) CGSize keyboardSize;
+@property (nonatomic, assign) BOOL hasKeyboard;
+
++ (instancetype)helper;
+
+@end

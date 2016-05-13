@@ -16,10 +16,10 @@
 {
     MASearchResultCellObject *object = [MASearchResultCellObject new];
     
-//    object.imageUrlString = track.artworkUrl;
-//    object.trackName = track.trackName;
-//    object.artistName = track.artistName;
-//    object.collectionName = track.collectionName;
+    object.imageUrlString = track.artworkUrl;
+    object.trackName = track.trackName;
+    object.artistName = track.artistName;
+    object.collectionName = track.collectionName;
     
     return object;
 }

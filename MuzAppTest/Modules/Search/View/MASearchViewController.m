@@ -14,7 +14,9 @@
 #import "MASearchResultCell.h"
 #import "MASearchResultCellObject.h"
 
-@interface MASearchViewController () <UITableViewDataSource, UITableViewDelegate>
+#import "UIViewController+APLKeyboardHandler.h"
+
+@interface MASearchViewController () <UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate>
 
 @property (nonatomic, weak) IBOutlet UITableView *tableView;
 @property (nonatomic, weak) IBOutlet UISearchBar *searchBar;
@@ -24,6 +26,8 @@
 @end
 
 @implementation MASearchViewController
+
+@synthesize hasKeyboard;
 
 #pragma mark - Lifecycle
 
@@ -36,11 +40,11 @@
 {
 	[super viewDidLoad];
 	[self setupView];
+    [self setupKeyboardHandler];
 }
 
 - (void)setupView
 {
-
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -61,6 +65,13 @@
     }
     self.searchResults = [NSArray arrayWithArray:arr];
     [self.tableView reloadData];
+}
+
+#pragma mark -- Values
+
+- (NSString *)valueSearchBarText
+{
+    return self.searchBar.text;
 }
 
 #pragma mark - UITableViewDataSource
@@ -87,17 +98,42 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
+#pragma mark - UISearchBarDelegate
+
+- (void)searchBarTextDidBeginEditing:(UISearchBar *)searchBar
+{
+    [self.output actionSearchBarActivate];
+}
+
+- (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText
+{
+    [self.output actionSearchBarTextDidChange];
+}
+
 #pragma mark - Mock
 
 - (void)mock
 {
     NSMutableArray *arr = [NSMutableArray new];
-    for (NSInteger i = 0; i < 1; i++)
+    for (NSInteger i = 0; i < 100; i++)
     {
         MASearchResultCellObject *obj = [MASearchResultCellObject mock];
         [arr addObject:obj];
     }
     self.searchResults = [NSArray arrayWithArray:arr];
+}
+
+#pragma mark - MARouterTransitionHandler
+
+- (void)vc_prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqualToString:@"OpenHistory"])
+    {
+        segue.destinationViewController.view.frame = CGRectMake(0,
+                                                                CGRectGetMaxY(self.searchBar.frame),
+                                                                self.view.frame.size.width,
+                                                                self.view.frame.size.height-CGRectGetMaxY(self.searchBar.frame));
+    }
 }
 
 @end

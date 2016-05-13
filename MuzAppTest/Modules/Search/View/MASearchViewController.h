@@ -9,11 +9,12 @@
 
 #import <UIKit/UIKit.h>
 
+#import "MAModuleViewController.h"
 #import "MASearchViewInput.h"
 
 @protocol MASearchViewOutput;
 
-@interface MASearchViewController : UIViewController <MASearchViewInput>
+@interface MASearchViewController : MAModuleViewController <MASearchViewInput>
 
 @property (nonatomic, strong) id<MASearchViewOutput> output;
 

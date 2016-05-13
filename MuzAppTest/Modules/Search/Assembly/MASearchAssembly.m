@@ -14,6 +14,10 @@
 #import "MASearchInteractor.h"
 #import "MASearchRouter.h"
 
+@interface MASearchAssembly ()
+
+@end
+
 @implementation MASearchAssembly
 
 - (MASearchPresenter *)presenter
@@ -61,7 +65,8 @@
     return [TyphoonDefinition withClass:[MASearchRouter class]
                           configuration:^(TyphoonDefinition *definition)
     {
-
+        [definition injectProperty:@selector(transitionHandler)
+                              with:[self viewSearch]];
     }];
 }
 

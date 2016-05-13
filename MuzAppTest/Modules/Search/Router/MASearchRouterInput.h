@@ -12,5 +12,6 @@
 @protocol MASearchRouterInput <NSObject>
 
 - (void)openHistoryModule;
+- (void)closeHistoryModule;
 
 @end
