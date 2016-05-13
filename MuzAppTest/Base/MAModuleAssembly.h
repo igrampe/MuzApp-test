@@ -8,7 +8,7 @@
 
 #import <Typhoon/Typhoon.h>
 
-@protocol MAServiceComponents;
+#import "MAServiceComponents.h"
 
 @interface MAModuleAssembly : TyphoonAssembly
 

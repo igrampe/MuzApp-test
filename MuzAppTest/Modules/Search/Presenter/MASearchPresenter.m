@@ -43,6 +43,21 @@
     }
 }
 
+- (void)actionSearchBarSearch
+{
+    [self.interactor apiSearchWithQuery:[self.view valueSearchBarText] offset:0];
+}
+
 #pragma mark - MASearchInteractorOutput
+
+- (void)didFinishApiSearchWithObjects:(NSArray *)objects
+{
+    [self.view updateWithSearchResults:objects];
+}
+
+- (void)didFailedApiSearchWithError:(NSError *)error
+{
+    
+}
 
 @end

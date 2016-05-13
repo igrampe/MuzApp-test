@@ -10,4 +10,16 @@
 
 @implementation MADataManagerImpl
 
+#pragma mark - MADataManager
+
+- (void)addHistoryItem:(MAHistoryItemPonso *)ponso
+{
+    
+}
+
+- (NSArray <MAHistoryItemPonso *> *)historyItems
+{
+    return nil;
+}
+
 @end

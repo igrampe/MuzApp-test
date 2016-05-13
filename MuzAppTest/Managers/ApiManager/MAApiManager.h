@@ -8,6 +8,14 @@
 
 #import <Foundation/Foundation.h>
 
+@class MATrackPonso;
+
+typedef void (^MAApiManagerSearchHandler)(NSArray <MATrackPonso *> *objects, NSError *error);
+
 @protocol MAApiManager <NSObject>
+
+- (NSURLSessionTask *)searchTrackWithQuery:(NSString *)query
+                                    offset:(NSInteger)offset
+                                   handler:(MAApiManagerSearchHandler)handler;
 
 @end

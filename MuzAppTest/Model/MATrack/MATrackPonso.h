@@ -7,8 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <EasyMapping.h>
 
-@interface MATrackPonso : NSObject
+@interface MATrackPonso : NSObject <EKMappingProtocol>
 
 @property (nonatomic, strong) NSNumber *trackId;
 @property (nonatomic, strong) NSString *artistName;

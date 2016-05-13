@@ -10,4 +10,21 @@
 
 @implementation MATrackPonso
 
++ (EKObjectMapping *)objectMapping
+{
+    EKObjectMapping *mapping = [EKObjectMapping mappingForClass:[self class]
+                                                      withBlock:
+    ^(EKObjectMapping *mapping)
+    {
+        [mapping mapPropertiesFromArray:@[NSStringFromSelector(@selector(trackId)),
+                                          NSStringFromSelector(@selector(artistName)),
+                                          NSStringFromSelector(@selector(trackName)),
+                                          NSStringFromSelector(@selector(collectionName))]];
+        
+        [mapping mapKeyPath:@"artworkUrl100"
+                 toProperty:NSStringFromSelector(@selector(artworkUrl))];
+    }];
+    return mapping;
+}
+
 @end

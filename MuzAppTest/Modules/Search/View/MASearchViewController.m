@@ -85,10 +85,19 @@
 {
     MASearchResultCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MASearchResultCell"];
     
-    MASearchResultCellObject *object = self.searchResults[indexPath.row];
-    [cell configureWithObject:object];
-    
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView
+  willDisplayCell:(UITableViewCell *)cell
+forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if ([cell isKindOfClass:[MASearchResultCell class]])
+    {
+        MASearchResultCell *c = (MASearchResultCell *)cell;
+        MASearchResultCellObject *object = self.searchResults[indexPath.row];
+        [c configureWithObject:object];
+    }
 }
 
 #pragma mark - UITableViewDelegate
@@ -108,6 +117,11 @@
 - (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText
 {
     [self.output actionSearchBarTextDidChange];
+}
+
+- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar
+{
+    [self.output actionSearchBarSearch];
 }
 
 #pragma mark - Mock

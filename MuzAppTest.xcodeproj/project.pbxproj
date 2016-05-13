@@ -71,6 +71,7 @@
 		4D252B9A637B5D0C90F2BA3B /* MASearchInteractorInput.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = MASearchInteractorInput.h; sourceTree = "<group>"; };
 		4EB99EA913F11CE6411D2259 /* MAHistoryInteractorInput.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = MAHistoryInteractorInput.h; sourceTree = "<group>"; };
 		528287E9B268C0F31528CD06 /* MASearchInteractor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = MASearchInteractor.m; sourceTree = "<group>"; };
+		5344F2FC1CE5F22900139D52 /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		5363BD581CE1E540007CAEAC /* MuzAppTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MuzAppTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5363BD761CE1ED7F007CAEAC /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		5363BD771CE1ED7F007CAEAC /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -297,6 +298,7 @@
 		5363BD811CE1ED7F007CAEAC /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				5344F2FC1CE5F22900139D52 /* Constants.h */,
 				53D79B8C1CE2543E007AD071 /* PrefixHeader.pch */,
 				5363BD821CE1ED7F007CAEAC /* Info.plist */,
 				5363BD831CE1ED7F007CAEAC /* main.m */,

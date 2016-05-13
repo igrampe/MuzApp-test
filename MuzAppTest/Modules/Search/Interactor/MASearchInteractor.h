@@ -10,9 +10,11 @@
 #import "MASearchInteractorInput.h"
 
 @protocol MASearchInteractorOutput;
+@protocol MAApiManager;
 
 @interface MASearchInteractor : NSObject <MASearchInteractorInput>
 
 @property (nonatomic, weak) id<MASearchInteractorOutput> output;
+@property (nonatomic, strong) id<MAApiManager> apiManager;
 
 @end

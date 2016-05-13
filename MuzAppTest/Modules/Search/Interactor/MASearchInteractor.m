@@ -11,8 +11,38 @@
 
 #import "MASearchInteractorOutput.h"
 
+#import "MAApiManager.h"
+
+@interface MASearchInteractor ()
+
+@property (nonatomic, strong) NSURLSessionTask *searchTask;
+
+@end
+
 @implementation MASearchInteractor
 
 #pragma mark - MASearchInteractorInput
+
+- (void)apiSearchWithQuery:(NSString *)query offset:(NSInteger)offset
+{
+    if (self.searchTask)
+    {
+        [self.searchTask cancel];
+    }
+    __weak typeof(self) welf = self;
+    self.searchTask = [self.apiManager searchTrackWithQuery:query
+                                                     offset:offset
+                                                    handler:
+    ^(NSArray *objects, NSError *error)
+    {
+        if (error)
+        {
+            [welf.output didFailedApiSearchWithError:error];
+        } else
+        {
+            [welf.output didFinishApiSearchWithObjects:objects];
+        }
+    }];
+}
 
 @end

@@ -11,4 +11,7 @@
 
 @protocol MASearchInteractorOutput <NSObject>
 
+- (void)didFinishApiSearchWithObjects:(NSArray *)objects;
+- (void)didFailedApiSearchWithError:(NSError *)error;
+
 @end

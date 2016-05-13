@@ -11,4 +11,6 @@
 
 @protocol MASearchInteractorInput <NSObject>
 
+- (void)apiSearchWithQuery:(NSString *)query offset:(NSInteger)offset;
+
 @end

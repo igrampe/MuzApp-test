@@ -8,6 +8,11 @@
 
 #import <Foundation/Foundation.h>
 
+@class MAHistoryItemPonso;
+
 @protocol MADataManager <NSObject>
+
+- (void)addHistoryItem:(MAHistoryItemPonso *)ponso;
+- (NSArray <MAHistoryItemPonso *> *)historyItems;
 
 @end

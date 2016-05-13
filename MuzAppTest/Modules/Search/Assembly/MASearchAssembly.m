@@ -43,6 +43,8 @@
     {
         [definition injectProperty:@selector(output)
                               with:[self presenterSearch]];
+        [definition injectProperty:@selector(apiManager)
+                              with:[self.serviceComponents apiManager]];
     }];
 }
 
