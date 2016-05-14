@@ -25,4 +25,8 @@
 
 #define APP_DOMAIN @"APP_DOMAIN"
 
+#pragma amrk - Data
+
+#define DB_NAME @"default"
+
 #endif /* Constants_h */

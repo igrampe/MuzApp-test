@@ -9,10 +9,15 @@
 #import <Foundation/Foundation.h>
 
 @class MAHistoryItemPonso;
+@class MATrackPonso;
 
 @protocol MADataManager <NSObject>
 
 - (void)addHistoryItem:(MAHistoryItemPonso *)ponso;
 - (NSArray <MAHistoryItemPonso *> *)historyItems;
+
+- (void)addTracks:(NSArray <MATrackPonso *>*)tracks;
+- (NSArray <MATrackPonso *>*)tracks;
+- (MATrackPonso *)trackWithId:(NSNumber *)trackId;
 
 @end

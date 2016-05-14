@@ -14,6 +14,10 @@
 - (void)updateWithSearchResults:(NSArray *)searchResults;
 - (void)showLoader;
 - (void)hideLoader;
+- (void)showResults;
+- (void)hideResults;
+- (void)showErrorWithMessage:(NSString *)message;
+- (void)showNoResults;
 
 - (NSString *)valueSearchBarText;
 

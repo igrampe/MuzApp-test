@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		48AB507657B7B282B370CD34 /* MASearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5E5B67B052F4987EC92251C /* MASearchViewController.m */; };
+		5344F3271CE76AFB00139D52 /* MAHistoryItemObject+Ponso.m in Sources */ = {isa = PBXBuildFile; fileRef = 5344F3261CE76AFB00139D52 /* MAHistoryItemObject+Ponso.m */; };
+		5344F32A1CE76FA100139D52 /* MATrackObject+Ponso.m in Sources */ = {isa = PBXBuildFile; fileRef = 5344F3291CE76FA100139D52 /* MATrackObject+Ponso.m */; };
 		5363BD841CE1ED7F007CAEAC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5363BD771CE1ED7F007CAEAC /* AppDelegate.m */; };
 		5363BD851CE1ED7F007CAEAC /* MuzAppTest.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5363BD791CE1ED7F007CAEAC /* MuzAppTest.xcdatamodeld */; };
 		5363BD861CE1ED7F007CAEAC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5363BD7C1CE1ED7F007CAEAC /* Assets.xcassets */; };
@@ -72,6 +74,10 @@
 		4EB99EA913F11CE6411D2259 /* MAHistoryInteractorInput.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = MAHistoryInteractorInput.h; sourceTree = "<group>"; };
 		528287E9B268C0F31528CD06 /* MASearchInteractor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = MASearchInteractor.m; sourceTree = "<group>"; };
 		5344F2FC1CE5F22900139D52 /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		5344F3251CE76AFB00139D52 /* MAHistoryItemObject+Ponso.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MAHistoryItemObject+Ponso.h"; sourceTree = "<group>"; };
+		5344F3261CE76AFB00139D52 /* MAHistoryItemObject+Ponso.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MAHistoryItemObject+Ponso.m"; sourceTree = "<group>"; };
+		5344F3281CE76FA100139D52 /* MATrackObject+Ponso.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MATrackObject+Ponso.h"; sourceTree = "<group>"; };
+		5344F3291CE76FA100139D52 /* MATrackObject+Ponso.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MATrackObject+Ponso.m"; sourceTree = "<group>"; };
 		5363BD581CE1E540007CAEAC /* MuzAppTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MuzAppTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5363BD761CE1ED7F007CAEAC /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		5363BD771CE1ED7F007CAEAC /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -385,6 +391,8 @@
 				5363BDD61CE1F98B007CAEAC /* MAHistoryItemObject.m */,
 				5363BDD71CE1F98B007CAEAC /* MAHistoryItemPonso.h */,
 				5363BDD81CE1F98B007CAEAC /* MAHistoryItemPonso.m */,
+				5344F3251CE76AFB00139D52 /* MAHistoryItemObject+Ponso.h */,
+				5344F3261CE76AFB00139D52 /* MAHistoryItemObject+Ponso.m */,
 			);
 			path = MAHistoryItem;
 			sourceTree = "<group>";
@@ -398,6 +406,8 @@
 				5363BDDD1CE1F98B007CAEAC /* MATrackObject.m */,
 				5363BDDE1CE1F98B007CAEAC /* MATrackPonso.h */,
 				5363BDDF1CE1F98B007CAEAC /* MATrackPonso.m */,
+				5344F3281CE76FA100139D52 /* MATrackObject+Ponso.h */,
+				5344F3291CE76FA100139D52 /* MATrackObject+Ponso.m */,
 			);
 			path = MATrack;
 			sourceTree = "<group>";
@@ -710,6 +720,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5363BDE41CE1F98B007CAEAC /* MATrackObject.m in Sources */,
+				5344F32A1CE76FA100139D52 /* MATrackObject+Ponso.m in Sources */,
 				5363BDAF1CE1F546007CAEAC /* APLFileSystem.m in Sources */,
 				5363BDB21CE1F546007CAEAC /* APLTextHelper.m in Sources */,
 				5363BDE51CE1F98B007CAEAC /* MATrackPonso.m in Sources */,
@@ -745,6 +756,7 @@
 				F9839424819C4AB2E25635D2 /* MASearchAssembly.m in Sources */,
 				48AB507657B7B282B370CD34 /* MASearchViewController.m in Sources */,
 				5389C5DB1CE5131D007C1F6C /* MASearchResultCell.m in Sources */,
+				5344F3271CE76AFB00139D52 /* MAHistoryItemObject+Ponso.m in Sources */,
 				5BFB20E6FEB8A35D7B398924 /* MASearchPresenter.m in Sources */,
 				C82DC4F28C43436A2390D8C6 /* MASearchInteractor.m in Sources */,
 				8ED1ACE1AA3A9F8036C05716 /* MASearchRouter.m in Sources */,

@@ -48,22 +48,31 @@
 - (void)actionSearchBarSearch
 {
     NSString *query = [self.view valueSearchBarText];
-    [self.interactor apiSearchWithQuery:query offset:0];
-    
     MAHistoryItemPonso *item = [MAHistoryItemPonso objectWithQuery:query date:[NSDate date]];
     [self.interactor dbAddHistoryItem:item];
+    
+    [self.interactor apiSearchWithQuery:query offset:0];
+    [self.view showLoader];
 }
 
 #pragma mark - MASearchInteractorOutput
 
 - (void)didFinishApiSearchWithObjects:(NSArray *)objects
 {
-    [self.view updateWithSearchResults:objects];
+    [self.view hideLoader];
+    if (objects.count > 0)
+    {
+        [self.view updateWithSearchResults:objects];
+    } else
+    {
+        [self.view showNoResults];
+    }
 }
 
 - (void)didFailedApiSearchWithError:(NSError *)error
 {
-    
+    [self.view hideLoader];
+    [self.view showErrorWithMessage:error.localizedDescription];
 }
 
 @end

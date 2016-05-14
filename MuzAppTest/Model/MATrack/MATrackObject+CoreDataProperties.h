@@ -20,6 +20,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nullable, nonatomic, retain) NSString *trackName;
 @property (nullable, nonatomic, retain) NSString *collectionName;
 @property (nullable, nonatomic, retain) NSString *artworkUrl;
+@property (nullable, nonatomic, retain) NSNumber *searchOrder;
 
 @end
 

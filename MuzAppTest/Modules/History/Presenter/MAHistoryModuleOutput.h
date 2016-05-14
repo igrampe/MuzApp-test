@@ -11,4 +11,6 @@
 
 @protocol MAHistoryModuleOutput <NSObject>
 
+- (void)historyModuleDidSelectHistoryItemWithQuery:(NSString *)query;
+
 @end

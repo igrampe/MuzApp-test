@@ -20,6 +20,8 @@
 
 @property (nonatomic, weak) IBOutlet UITableView *tableView;
 @property (nonatomic, weak) IBOutlet UISearchBar *searchBar;
+@property (nonatomic, weak) IBOutlet UIActivityIndicatorView *activityView;
+@property (nonatomic, weak) IBOutlet UILabel *errorLabel;
 
 @property (nonatomic, strong) NSArray<MASearchResultCellObject *> *searchResults;
 
@@ -45,6 +47,7 @@
 
 - (void)setupView
 {
+    self.errorLabel.hidden = YES;
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -69,12 +72,28 @@
 
 - (void)showLoader
 {
-    
+    self.errorLabel.hidden = YES;
+    [self.activityView startAnimating];
+    self.tableView.alpha = 0;
 }
 
 - (void)hideLoader
 {
-    
+    [self.activityView stopAnimating];
+    self.tableView.alpha = 1;
+}
+
+- (void)showErrorWithMessage:(NSString *)message
+{
+    self.errorLabel.hidden = NO;
+    // TODO: show error label
+}
+
+- (void)showNoResults
+{
+    self.errorLabel.hidden = NO;
+    self.tableView.alpha = 0;
+    self.errorLabel.text = NSLS(@"Поиск не дал результатов");
 }
 
 #pragma mark -- Values

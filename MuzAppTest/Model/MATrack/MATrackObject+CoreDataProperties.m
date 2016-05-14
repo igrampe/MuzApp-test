@@ -18,5 +18,6 @@
 @dynamic trackName;
 @dynamic collectionName;
 @dynamic artworkUrl;
+@dynamic searchOrder;
 
 @end
