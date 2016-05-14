@@ -33,7 +33,7 @@
 
 - (void)awakeFromNib
 {
-    [self mock];
+//    [self mock];
 }
 
 - (void)viewDidLoad
@@ -65,6 +65,16 @@
     }
     self.searchResults = [NSArray arrayWithArray:arr];
     [self.tableView reloadData];
+}
+
+- (void)showLoader
+{
+    
+}
+
+- (void)hideLoader
+{
+    
 }
 
 #pragma mark -- Values

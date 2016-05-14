@@ -13,4 +13,6 @@
 @property (nonatomic, strong) NSString *query;
 @property (nonatomic, strong) NSDate *queryDate;
 
++ (MAHistoryItemPonso *)objectWithQuery:(NSString *)query date:(NSDate *)date;
+
 @end

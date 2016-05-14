@@ -10,9 +10,12 @@
 #import "MAHistoryInteractorInput.h"
 
 @protocol MAHistoryInteractorOutput;
+@protocol MADataManager;
 
 @interface MAHistoryInteractor : NSObject <MAHistoryInteractorInput>
 
 @property (nonatomic, weak) id<MAHistoryInteractorOutput> output;
+
+@property (nonatomic, strong) id<MADataManager> dataManager;
 
 @end

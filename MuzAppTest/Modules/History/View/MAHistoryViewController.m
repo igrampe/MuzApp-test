@@ -32,7 +32,7 @@
 
 - (void)awakeFromNib
 {
-    [self mock];
+//    [self mock];
 }
 
 - (void)viewDidLoad
@@ -52,9 +52,24 @@
 {
     [super viewWillAppear:animated];
     [self keyboardUpdate];
+    [self.output viewWillAppear];
 }
 
 #pragma mark - MAHistoryViewInput
+
+- (void)updateWithHistoryItems:(NSArray <MAHistoryItemPonso *>*)historyItems
+{
+    NSMutableArray *arr = [NSMutableArray new];
+    
+    for (MAHistoryItemPonso *ponso in historyItems)
+    {
+        MAHistoryItemCellObject *object = [MAHistoryItemCellObject objectWithHistoryItem:ponso];
+        [arr addObject:object];
+    }
+    
+    self.historyItems = [NSArray arrayWithArray:arr];
+    [self.tableView reloadData];
+}
 
 #pragma mark - UITableViewDataSource
 
@@ -67,11 +82,18 @@
 {
     MAHistoryItemCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MAHistoryItemCell"];
     
-    MAHistoryItemCellObject *object = self.historyItems[indexPath.row];
-    
-    [cell configureWithObject:object];
-    
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if ([cell isKindOfClass:[MAHistoryItemCell class]])
+    {
+        MAHistoryItemCell *c = (MAHistoryItemCell *)cell;
+        
+        MAHistoryItemCellObject *object = self.historyItems[indexPath.row];
+        [c configureWithObject:object];
+    }
 }
 
 #pragma mark - Mock

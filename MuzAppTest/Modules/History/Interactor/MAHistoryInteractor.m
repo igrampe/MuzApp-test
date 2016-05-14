@@ -11,8 +11,19 @@
 
 #import "MAHistoryInteractorOutput.h"
 
+#import "MADataManager.h"
+
+@interface MAHistoryInteractor ()
+
+@end
+
 @implementation MAHistoryInteractor
 
 #pragma mark - MAHistoryInteractorInput
+
+- (NSArray *)dbHistoryItems
+{
+    return [self.dataManager historyItems];
+}
 
 @end

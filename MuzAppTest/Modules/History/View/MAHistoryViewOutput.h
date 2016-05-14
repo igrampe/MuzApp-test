@@ -11,4 +11,6 @@
 
 @protocol MAHistoryViewOutput <NSObject>
 
+- (void)viewWillAppear;
+
 @end

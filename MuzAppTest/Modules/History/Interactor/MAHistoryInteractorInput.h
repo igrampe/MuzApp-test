@@ -11,4 +11,6 @@
 
 @protocol MAHistoryInteractorInput <NSObject>
 
+- (NSArray *)dbHistoryItems;
+
 @end

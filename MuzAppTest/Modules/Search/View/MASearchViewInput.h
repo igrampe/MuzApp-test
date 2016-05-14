@@ -12,6 +12,8 @@
 @protocol MASearchViewInput <NSObject>
 
 - (void)updateWithSearchResults:(NSArray *)searchResults;
+- (void)showLoader;
+- (void)hideLoader;
 
 - (NSString *)valueSearchBarText;
 

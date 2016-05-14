@@ -9,8 +9,11 @@
 
 #import <Foundation/Foundation.h>
 
+@class MAHistoryItemPonso;
+
 @protocol MASearchInteractorInput <NSObject>
 
 - (void)apiSearchWithQuery:(NSString *)query offset:(NSInteger)offset;
+- (void)dbAddHistoryItem:(MAHistoryItemPonso *)item;
 
 @end

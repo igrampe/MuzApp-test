@@ -11,10 +11,13 @@
 
 @protocol MASearchInteractorOutput;
 @protocol MAApiManager;
+@protocol MADataManager;
 
 @interface MASearchInteractor : NSObject <MASearchInteractorInput>
 
 @property (nonatomic, weak) id<MASearchInteractorOutput> output;
+
 @property (nonatomic, strong) id<MAApiManager> apiManager;
+@property (nonatomic, strong) id<MADataManager> dataManager;
 
 @end

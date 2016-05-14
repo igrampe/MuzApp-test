@@ -20,11 +20,6 @@
 
 @implementation MASearchAssembly
 
-- (MASearchPresenter *)presenter
-{
-    return [self presenterSearch];
-}
-
 - (MASearchViewController *)viewSearch
 {
     return [TyphoonDefinition withClass:[MASearchViewController class]
@@ -45,6 +40,8 @@
                               with:[self presenterSearch]];
         [definition injectProperty:@selector(apiManager)
                               with:[self.serviceComponents apiManager]];
+        [definition injectProperty:@selector(dataManager)
+                              with:[self.serviceComponents dataManager]];
     }];
 }
 

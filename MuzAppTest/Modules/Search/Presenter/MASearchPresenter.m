@@ -13,6 +13,8 @@
 #import "MASearchInteractorInput.h"
 #import "MASearchRouterInput.h"
 
+#import "MAHistoryItemPonso.h"
+
 @implementation MASearchPresenter
 
 #pragma mark - MASearchModuleInput
@@ -45,7 +47,11 @@
 
 - (void)actionSearchBarSearch
 {
-    [self.interactor apiSearchWithQuery:[self.view valueSearchBarText] offset:0];
+    NSString *query = [self.view valueSearchBarText];
+    [self.interactor apiSearchWithQuery:query offset:0];
+    
+    MAHistoryItemPonso *item = [MAHistoryItemPonso objectWithQuery:query date:[NSDate date]];
+    [self.interactor dbAddHistoryItem:item];
 }
 
 #pragma mark - MASearchInteractorOutput

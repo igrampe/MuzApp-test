@@ -10,4 +10,14 @@
 
 @implementation MAHistoryItemPonso
 
++ (MAHistoryItemPonso *)objectWithQuery:(NSString *)query
+                                   date:(NSDate *)date
+{
+    MAHistoryItemPonso *object = [MAHistoryItemPonso new];
+    object.query = query;
+    object.queryDate = date;
+    
+    return object;
+}
+
 @end

@@ -16,11 +16,6 @@
 
 @implementation MAHistoryAssembly
 
-- (MAHistoryPresenter *)presenter
-{
-    return [self presenterHistory];
-}
-
 - (MAHistoryViewController *)viewHistory
 {
     return [TyphoonDefinition withClass:[MAHistoryViewController class]
@@ -39,6 +34,8 @@
     {
         [definition injectProperty:@selector(output)
                               with:[self presenterHistory]];
+        [definition injectProperty:@selector(dataManager)
+                              with:[self.serviceComponents dataManager]];
     }];
 }
 

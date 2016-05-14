@@ -9,6 +9,10 @@
 
 #import <Foundation/Foundation.h>
 
+@class MAHistoryItemPonso;
+
 @protocol MAHistoryViewInput <NSObject>
+
+- (void)updateWithHistoryItems:(NSArray <MAHistoryItemPonso *>*)historyItems;
 
 @end

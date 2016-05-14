@@ -12,6 +12,7 @@
 #import "MASearchInteractorOutput.h"
 
 #import "MAApiManager.h"
+#import "MADatamanager.h"
 
 @interface MASearchInteractor ()
 
@@ -43,6 +44,11 @@
             [welf.output didFinishApiSearchWithObjects:objects];
         }
     }];
+}
+
+- (void)dbAddHistoryItem:(MAHistoryItemPonso *)item
+{
+    [self.dataManager addHistoryItem:item];
 }
 
 @end

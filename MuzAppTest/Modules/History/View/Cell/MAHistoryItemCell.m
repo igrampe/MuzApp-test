@@ -8,6 +8,8 @@
 
 #import "MAHistoryItemCell.h"
 
+#import "MAHistoryItemCellObject.h"
+
 @interface MAHistoryItemCell ()
 
 @property (nonatomic, weak) IBOutlet UILabel *queryLabel;
@@ -18,7 +20,7 @@
 
 - (void)configureWithObject:(MAHistoryItemCellObject *)object
 {
-    
+    self.queryLabel.text = object.query;
 }
 
 @end
