@@ -14,6 +14,7 @@
 
 #import "MAHistoryItemObject.h"
 #import "MAHistoryItemObject+Ponso.h"
+#import "MAHistoryItemPonso.h"
 
 #import "MATrackObject.h"
 #import "MATrackObject+Ponso.h"
@@ -34,8 +35,26 @@
 
 - (void)addHistoryItem:(MAHistoryItemPonso *)ponso
 {
-    MAHistoryItemObject *object = [NSEntityDescription insertNewObjectForEntityForName:@"MAHistoryItemObject"
-                                                                inManagedObjectContext:self.managedObjectContext];
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"query = %@", ponso.query];
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc]
+                                    initWithEntityName:@"MAHistoryItemObject"];
+    [fetchRequest setPredicate:predicate];
+    
+    NSError *error = nil;
+    NSArray *items = [self.managedObjectContext executeFetchRequest:fetchRequest error:&error];
+    
+    MAHistoryItemObject *object = nil;
+    if (!error)
+    {
+        object = [items firstObject];
+    }
+    
+    if (!object)
+    {
+        object = [NSEntityDescription insertNewObjectForEntityForName:@"MAHistoryItemObject"
+                                               inManagedObjectContext:self.managedObjectContext];
+    }
+    
     [object fillWithPonso:ponso];
     
     [self saveContext];
@@ -73,6 +92,7 @@
     for (NSInteger i = 0; i < tracks.count; i++)
     {
         MATrackPonso *ponso = tracks[i];
+        
         MATrackObject *object = [NSEntityDescription insertNewObjectForEntityForName:@"MATrackObject"
                                                               inManagedObjectContext:self.managedObjectContext];
         [object fillWithPonso:ponso];
@@ -80,6 +100,17 @@
     }
     
     [self saveContext];
+}
+
+- (void)deleteTracks
+{
+    NSFetchRequest *request = [[NSFetchRequest alloc] initWithEntityName:@"MATrackObject"];
+    NSBatchDeleteRequest *delete = [[NSBatchDeleteRequest alloc] initWithFetchRequest:request];
+    
+    NSError *deleteError = nil;
+    [self.persistentStoreCoordinator executeRequest:delete
+                                        withContext:self.managedObjectContext
+                                              error:&deleteError];
 }
 
 - (NSArray <MATrackPonso *>*)tracks
@@ -109,7 +140,23 @@
 
 - (MATrackPonso *)trackWithId:(NSNumber *)trackId
 {
-    return nil;
+    MATrackPonso *result = nil;
+    
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"trackId = %@", trackId];
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc]
+                                    initWithEntityName:@"MATrackObject"];
+    [fetchRequest setPredicate:predicate];
+    
+    NSError *error = nil;
+    NSArray *items = [self.managedObjectContext executeFetchRequest:fetchRequest error:&error];
+    
+    if (!error)
+    {
+        MATrackObject *object = [items firstObject];
+        result = [object ponso];
+    }
+    
+    return result;
 }
 
 #pragma mark - CoreData

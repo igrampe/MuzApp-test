@@ -10,10 +10,15 @@
 #import <Foundation/Foundation.h>
 
 @class MAHistoryItemPonso;
+@class MATrackPonso;
 
 @protocol MASearchInteractorInput <NSObject>
 
 - (void)apiSearchWithQuery:(NSString *)query offset:(NSInteger)offset;
 - (void)dbAddHistoryItem:(MAHistoryItemPonso *)item;
+
+- (void)dbAddTracks:(NSArray <MATrackPonso *>*)tracks;
+- (void)dbDeleteTracks;
+- (NSArray <MATrackPonso *>*)dbTracks;
 
 @end

@@ -51,4 +51,19 @@
     [self.dataManager addHistoryItem:item];
 }
 
+- (void)dbAddTracks:(NSArray <MATrackPonso *>*)tracks
+{
+    [self.dataManager addTracks:tracks];
+}
+
+- (void)dbDeleteTracks
+{
+    [self.dataManager deleteTracks];
+}
+
+- (NSArray <MATrackPonso *>*)dbTracks
+{
+    return [self.dataManager tracks];
+}
+
 @end

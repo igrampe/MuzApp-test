@@ -18,6 +18,7 @@
 - (void)hideResults;
 - (void)showErrorWithMessage:(NSString *)message;
 - (void)showNoResults;
+- (void)scrollToTop;
 
 - (NSString *)valueSearchBarText;
 

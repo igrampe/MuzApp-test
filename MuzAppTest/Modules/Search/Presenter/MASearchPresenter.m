@@ -15,6 +15,12 @@
 
 #import "MAHistoryItemPonso.h"
 
+@interface MASearchPresenter ()
+
+@property (nonatomic, strong) NSArray *tracks;
+
+@end
+
 @implementation MASearchPresenter
 
 #pragma mark - MASearchModuleInput
@@ -59,10 +65,14 @@
 
 - (void)didFinishApiSearchWithObjects:(NSArray *)objects
 {
+    [self.interactor dbDeleteTracks];
+    [self.interactor dbAddTracks:objects];
+    [self _reloadTracks];
     [self.view hideLoader];
     if (objects.count > 0)
     {
-        [self.view updateWithSearchResults:objects];
+        [self.view updateWithSearchResults:self.tracks];
+        [self.view scrollToTop];
     } else
     {
         [self.view showNoResults];
@@ -73,6 +83,13 @@
 {
     [self.view hideLoader];
     [self.view showErrorWithMessage:error.localizedDescription];
+}
+
+#pragma makr - Private
+
+- (void)_reloadTracks
+{
+    self.tracks = [self.interactor dbTracks];
 }
 
 @end

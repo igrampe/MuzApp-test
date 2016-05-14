@@ -96,6 +96,11 @@
     self.errorLabel.text = NSLS(@"Поиск не дал результатов");
 }
 
+- (void)scrollToTop
+{
+    [self.tableView setContentOffset:CGPointMake(0, 0) animated:NO];
+}
+
 #pragma mark -- Values
 
 - (NSString *)valueSearchBarText

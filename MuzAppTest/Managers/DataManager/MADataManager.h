@@ -17,6 +17,7 @@
 - (NSArray <MAHistoryItemPonso *> *)historyItems;
 
 - (void)addTracks:(NSArray <MATrackPonso *>*)tracks;
+- (void)deleteTracks;
 - (NSArray <MATrackPonso *>*)tracks;
 - (MATrackPonso *)trackWithId:(NSNumber *)trackId;
 
