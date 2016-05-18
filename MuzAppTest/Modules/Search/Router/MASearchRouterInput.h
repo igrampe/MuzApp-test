@@ -14,4 +14,6 @@
 - (void)openHistoryModule;
 - (void)closeHistoryModule;
 
+- (void)openTrackModuleWithTrackId:(NSNumber *)trackId;
+
 @end

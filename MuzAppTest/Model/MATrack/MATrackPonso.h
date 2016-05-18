@@ -16,5 +16,10 @@
 @property (nonatomic, strong) NSString *trackName;
 @property (nonatomic, strong) NSString *collectionName;
 @property (nonatomic, strong) NSString *artworkUrl;
+@property (nonatomic, strong) NSString *genreName;
+@property (nonatomic, strong) NSNumber *year;
+
+- (NSString *)bigArtworkUrlStr;
+- (NSString *)artistAndAlbumTitle;
 
 @end

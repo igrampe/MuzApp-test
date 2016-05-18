@@ -19,6 +19,8 @@
     self.trackName = ponso.trackName;
     self.collectionName = ponso.collectionName;
     self.artworkUrl = ponso.artworkUrl;
+    self.genreName = ponso.genreName;
+    self.year = ponso.year;
 }
 
 - (MATrackPonso *)ponso
@@ -30,6 +32,8 @@
     ponso.trackName = self.trackName;
     ponso.collectionName = self.collectionName;
     ponso.artworkUrl = self.artworkUrl;
+    ponso.genreName = self.genreName;
+    ponso.year = self.year;
     
     return ponso;
 }

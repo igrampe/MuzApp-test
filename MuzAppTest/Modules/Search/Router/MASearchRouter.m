@@ -12,6 +12,8 @@
 #import "MAHistoryViewController.h"
 #import "APLOpenModulePromise.h"
 
+#import "MATrackModuleInput.h"
+
 @interface MASearchRouter ()
 
 @property (nonatomic, strong) id<APLRouterTransitionHandler> historyModuleTransitionHandler;
@@ -49,6 +51,24 @@
         [self.historyModuleTransitionHandler closeModule];
         self.historyModuleTransitionHandler = nil;
     }
+}
+
+- (void)openTrackModuleWithTrackId:(NSNumber *)trackId
+{
+    [[self.transitionHandler openModuleUsingSegue:@"OpenTrack"
+                              withTransitionBlock:
+      ^(id<APLRouterTransitionHandler> sourceModuleTransitionHandler,
+        id<APLRouterTransitionHandler> destinationModuleTransitionHandler)
+      {
+          
+      }] linkUsingBlock:^id<APLModuleOutput>(id<APLModuleInput> moduleInput)
+     {
+         if ([moduleInput conformsToProtocol:@protocol(MATrackModuleInput)])
+         {
+             [(id<MATrackModuleInput>)moduleInput setTrackId:trackId];
+         }
+         return nil;
+     }];
 }
 
 @end

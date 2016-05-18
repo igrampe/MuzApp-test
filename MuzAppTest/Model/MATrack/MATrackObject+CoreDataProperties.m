@@ -19,5 +19,7 @@
 @dynamic collectionName;
 @dynamic artworkUrl;
 @dynamic searchOrder;
+@dynamic genreName;
+@dynamic year;
 
 @end

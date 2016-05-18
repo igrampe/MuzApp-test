@@ -33,6 +33,7 @@
 		<string>MASearchAssembly</string>
 		<string>MAServiceComponentsAssembly</string>
 		<string>MAHistoryAssembly</string>
+		<string>MATrackAssembly</string>
 	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>

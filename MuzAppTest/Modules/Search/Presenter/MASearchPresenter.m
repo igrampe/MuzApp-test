@@ -16,6 +16,7 @@
 #import "MAHistoryModuleOutput.h"
 
 #import "MAHistoryItemPonso.h"
+#import "MATrackPonso.h"
 
 @interface MASearchPresenter () <MAHistoryModuleOutput>
 
@@ -56,6 +57,15 @@
 - (void)actionSearchBarSearch
 {
     [self _perfromSearch];
+}
+
+- (void)actionDidSelectItemAtIndex:(NSInteger)index
+{
+    if (index < self.tracks.count)
+    {
+        MATrackPonso *track = self.tracks[index];
+        [self.router openTrackModuleWithTrackId:track.trackId];
+    }
 }
 
 #pragma mark - MASearchInteractorOutput

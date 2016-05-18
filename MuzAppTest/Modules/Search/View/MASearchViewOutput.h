@@ -15,5 +15,6 @@
 - (void)actionSearchBarActivate;
 - (void)actionSearchBarTextDidChange;
 - (void)actionSearchBarSearch;
+- (void)actionDidSelectItemAtIndex:(NSInteger)index;
 
 @end

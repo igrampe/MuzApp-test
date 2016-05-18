@@ -135,6 +135,8 @@
     return cell;
 }
 
+#pragma mark - UITableViewDelegate
+
 - (void)tableView:(UITableView *)tableView
   willDisplayCell:(UITableViewCell *)cell
 forRowAtIndexPath:(NSIndexPath *)indexPath
@@ -147,11 +149,10 @@ forRowAtIndexPath:(NSIndexPath *)indexPath
     }
 }
 
-#pragma mark - UITableViewDelegate
-
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    [self.output actionDidSelectItemAtIndex:indexPath.row];
 }
 
 #pragma mark - UISearchBarDelegate

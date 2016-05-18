@@ -119,8 +119,8 @@
                             <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="f2z-Jm-Tj7">
                                 <rect key="frame" x="290" y="290" width="20" height="20"/>
                             </activityIndicatorView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Error" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0eB-r3-bwh">
-                                <rect key="frame" x="279" y="290" width="42" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0eB-r3-bwh">
+                                <rect key="frame" x="281" y="290" width="38" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -147,8 +147,8 @@
                         <outlet property="errorLabel" destination="0eB-r3-bwh" id="ahq-Mo-7Wu"/>
                         <outlet property="searchBar" destination="L2c-Pp-t66" id="l6A-BP-6ud"/>
                         <outlet property="tableView" destination="34d-DT-hSR" id="jhB-eM-1d0"/>
-                        <segue destination="i73-Bh-m9j" kind="show" identifier="ShowTrack" id="WEx-Xz-1gA"/>
                         <segue destination="vLM-Wk-Ifa" kind="custom" identifier="OpenHistory" customClass="MASearchSegueOpenHistory" id="6Xh-9q-Vhj"/>
+                        <segue destination="i73-Bh-m9j" kind="show" identifier="OpenTrack" id="tjy-qZ-aWA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1fX-jY-Hgj" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -158,28 +158,22 @@
         <!--Track-->
         <scene sceneID="bSF-1L-epv">
             <objects>
-                <viewController title="Track" id="i73-Bh-m9j" sceneMemberID="viewController">
+                <viewController title="Track" id="i73-Bh-m9j" customClass="MATrackViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="wNS-Wv-QwV"/>
                         <viewControllerLayoutGuide type="bottom" id="xQn-Cg-ciI"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="mJ9-2Q-B4H">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="1000"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vpz-pS-ld9">
-                                <rect key="frame" x="0.0" y="64" width="600" height="600"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="vpz-pS-ld9" secondAttribute="height" multiplier="1:1" id="cwu-xe-4Ud"/>
-                                </constraints>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Song Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BrG-m2-Ura">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Song Title" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BrG-m2-Ura">
                                 <rect key="frame" x="260" y="680" width="80" height="21"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Artist name - Album Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6yV-XC-CX7">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Artist name - Album Name" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6yV-XC-CX7">
                                 <rect key="frame" x="209" y="709" width="182" height="18"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -197,6 +191,12 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vpz-pS-ld9">
+                                <rect key="frame" x="0.0" y="64" width="600" height="600"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="vpz-pS-ld9" secondAttribute="height" multiplier="1:1" id="cwu-xe-4Ud"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -217,6 +217,15 @@
                             <constraint firstItem="6yV-XC-CX7" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="mJ9-2Q-B4H" secondAttribute="leading" constant="16" id="pJW-e2-t63"/>
                         </constraints>
                     </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="600" height="1000"/>
+                    <connections>
+                        <outlet property="artistLabel" destination="6yV-XC-CX7" id="pew-IR-tDu"/>
+                        <outlet property="coverView" destination="vpz-pS-ld9" id="ek8-ug-QZV"/>
+                        <outlet property="genreLabel" destination="1jm-6J-ba4" id="Bbc-2X-dBf"/>
+                        <outlet property="titleLabel" destination="BrG-m2-Ura" id="eVZ-fS-acp"/>
+                        <outlet property="yearLabel" destination="puj-0s-yc6" id="aeC-Qp-pXU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="V09-bj-YV8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
