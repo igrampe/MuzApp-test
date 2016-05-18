@@ -13,9 +13,11 @@
 #import "MASearchInteractorInput.h"
 #import "MASearchRouterInput.h"
 
+#import "MAHistoryModuleOutput.h"
+
 #import "MAHistoryItemPonso.h"
 
-@interface MASearchPresenter ()
+@interface MASearchPresenter () <MAHistoryModuleOutput>
 
 @property (nonatomic, strong) NSArray *tracks;
 
@@ -53,12 +55,7 @@
 
 - (void)actionSearchBarSearch
 {
-    NSString *query = [self.view valueSearchBarText];
-    MAHistoryItemPonso *item = [MAHistoryItemPonso objectWithQuery:query date:[NSDate date]];
-    [self.interactor dbAddHistoryItem:item];
-    
-    [self.interactor apiSearchWithQuery:query offset:0];
-    [self.view showLoader];
+    [self _perfromSearch];
 }
 
 #pragma mark - MASearchInteractorOutput
@@ -85,11 +82,32 @@
     [self.view showErrorWithMessage:error.localizedDescription];
 }
 
+#pragma mark - MAHistoryModuleOutput
+
+- (void)historyModuleDidSelectHistoryItemWithQuery:(NSString *)query
+{
+    [self.router closeHistoryModule];
+    [self.view setSearchBarText:query];
+    [self _perfromSearch];
+}
+
 #pragma makr - Private
 
 - (void)_reloadTracks
 {
     self.tracks = [self.interactor dbTracks];
+}
+
+- (void)_perfromSearch
+{
+    NSString *query = [self.view valueSearchBarText];
+    MAHistoryItemPonso *item = [MAHistoryItemPonso objectWithQuery:query date:[NSDate date]];
+    [self.interactor dbAddHistoryItem:item];
+    
+    [self.view hideKeyboard];
+    [self.view showLoader];
+    [self.interactor apiSearchWithQuery:query offset:0];
+    
 }
 
 @end

@@ -86,7 +86,9 @@
 - (void)showErrorWithMessage:(NSString *)message
 {
     self.errorLabel.hidden = NO;
-    // TODO: show error label
+    self.tableView.alpha = 1;
+    self.errorLabel.text = message;
+    [self.view layoutSubviews];
 }
 
 - (void)showNoResults
@@ -94,11 +96,22 @@
     self.errorLabel.hidden = NO;
     self.tableView.alpha = 0;
     self.errorLabel.text = NSLS(@"Поиск не дал результатов");
+    [self.view layoutSubviews];
 }
 
 - (void)scrollToTop
 {
     [self.tableView setContentOffset:CGPointMake(0, 0) animated:NO];
+}
+
+- (void)setSearchBarText:(NSString *)text
+{
+    self.searchBar.text = text;
+}
+
+- (void)hideKeyboard
+{
+    [self.searchBar resignFirstResponder];
 }
 
 #pragma mark -- Values

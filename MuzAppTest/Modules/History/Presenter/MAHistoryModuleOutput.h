@@ -8,8 +8,9 @@
 
 
 #import <Foundation/Foundation.h>
+#import "APLModuleOutput.h"
 
-@protocol MAHistoryModuleOutput <NSObject>
+@protocol MAHistoryModuleOutput <APLModuleOutput>
 
 - (void)historyModuleDidSelectHistoryItemWithQuery:(NSString *)query;
 

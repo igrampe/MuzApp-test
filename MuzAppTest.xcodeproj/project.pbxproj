@@ -10,6 +10,7 @@
 		48AB507657B7B282B370CD34 /* MASearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5E5B67B052F4987EC92251C /* MASearchViewController.m */; };
 		5344F3271CE76AFB00139D52 /* MAHistoryItemObject+Ponso.m in Sources */ = {isa = PBXBuildFile; fileRef = 5344F3261CE76AFB00139D52 /* MAHistoryItemObject+Ponso.m */; };
 		5344F32A1CE76FA100139D52 /* MATrackObject+Ponso.m in Sources */ = {isa = PBXBuildFile; fileRef = 5344F3291CE76FA100139D52 /* MATrackObject+Ponso.m */; };
+		5344F32F1CE866D900139D52 /* APLOpenModulePromise.m in Sources */ = {isa = PBXBuildFile; fileRef = 5344F32E1CE866D900139D52 /* APLOpenModulePromise.m */; };
 		5363BD841CE1ED7F007CAEAC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5363BD771CE1ED7F007CAEAC /* AppDelegate.m */; };
 		5363BD851CE1ED7F007CAEAC /* MuzAppTest.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5363BD791CE1ED7F007CAEAC /* MuzAppTest.xcdatamodeld */; };
 		5363BD861CE1ED7F007CAEAC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5363BD7C1CE1ED7F007CAEAC /* Assets.xcassets */; };
@@ -44,10 +45,10 @@
 		5389C5E51CE51E04007C1F6C /* MAHistoryItemCellObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 5389C5E41CE51E04007C1F6C /* MAHistoryItemCellObject.m */; };
 		5389C5E81CE525EA007C1F6C /* MASearchSegueOpenHistory.m in Sources */ = {isa = PBXBuildFile; fileRef = 5389C5E71CE525EA007C1F6C /* MASearchSegueOpenHistory.m */; };
 		5389C5EC1CE52A0C007C1F6C /* UIViewController+TransitionHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 5389C5EB1CE52A0C007C1F6C /* UIViewController+TransitionHandler.m */; };
-		5389C5F21CE5DB9D007C1F6C /* MAModuleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5389C5F11CE5DB9D007C1F6C /* MAModuleViewController.m */; };
+		5389C5F21CE5DB9D007C1F6C /* APLModuleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5389C5F11CE5DB9D007C1F6C /* APLModuleViewController.m */; };
 		5389C5F61CE5E7F0007C1F6C /* UIViewController+APLKeyboardHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 5389C5F51CE5E7F0007C1F6C /* UIViewController+APLKeyboardHandler.m */; };
 		53D79B8F1CE25DE9007AD071 /* MAAppAssembly.m in Sources */ = {isa = PBXBuildFile; fileRef = 53D79B8E1CE25DE9007AD071 /* MAAppAssembly.m */; };
-		53D79B971CE26044007AD071 /* MAModuleAssembly.m in Sources */ = {isa = PBXBuildFile; fileRef = 53D79B961CE26044007AD071 /* MAModuleAssembly.m */; };
+		53D79B971CE26044007AD071 /* APLModuleAssembly.m in Sources */ = {isa = PBXBuildFile; fileRef = 53D79B961CE26044007AD071 /* APLModuleAssembly.m */; };
 		5BFB20E6FEB8A35D7B398924 /* MASearchPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 4975F45F3DC330B0F22C74A6 /* MASearchPresenter.m */; };
 		77E9F35C7B3205A87F0A35B7 /* MAHistoryPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C2F0112A0676B2DE184EB39 /* MAHistoryPresenter.m */; };
 		7AEDD6BAA2F80D41D008E693 /* libPods-MuzAppTest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 891E4FE868F86452627AE8C3 /* libPods-MuzAppTest.a */; };
@@ -78,6 +79,10 @@
 		5344F3261CE76AFB00139D52 /* MAHistoryItemObject+Ponso.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MAHistoryItemObject+Ponso.m"; sourceTree = "<group>"; };
 		5344F3281CE76FA100139D52 /* MATrackObject+Ponso.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MATrackObject+Ponso.h"; sourceTree = "<group>"; };
 		5344F3291CE76FA100139D52 /* MATrackObject+Ponso.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MATrackObject+Ponso.m"; sourceTree = "<group>"; };
+		5344F32B1CE865CE00139D52 /* APLModuleInput.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = APLModuleInput.h; sourceTree = "<group>"; };
+		5344F32C1CE865F300139D52 /* APLModuleOutput.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = APLModuleOutput.h; sourceTree = "<group>"; };
+		5344F32D1CE866D900139D52 /* APLOpenModulePromise.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APLOpenModulePromise.h; sourceTree = "<group>"; };
+		5344F32E1CE866D900139D52 /* APLOpenModulePromise.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APLOpenModulePromise.m; sourceTree = "<group>"; };
 		5363BD581CE1E540007CAEAC /* MuzAppTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MuzAppTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5363BD761CE1ED7F007CAEAC /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		5363BD771CE1ED7F007CAEAC /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -146,18 +151,18 @@
 		5389C5E41CE51E04007C1F6C /* MAHistoryItemCellObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAHistoryItemCellObject.m; sourceTree = "<group>"; };
 		5389C5E61CE525EA007C1F6C /* MASearchSegueOpenHistory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASearchSegueOpenHistory.h; sourceTree = "<group>"; };
 		5389C5E71CE525EA007C1F6C /* MASearchSegueOpenHistory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASearchSegueOpenHistory.m; sourceTree = "<group>"; };
-		5389C5E91CE5297E007C1F6C /* MARouterTransitionHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MARouterTransitionHandler.h; sourceTree = "<group>"; };
+		5389C5E91CE5297E007C1F6C /* APLRouterTransitionHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = APLRouterTransitionHandler.h; sourceTree = "<group>"; };
 		5389C5EA1CE52A0C007C1F6C /* UIViewController+TransitionHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+TransitionHandler.h"; sourceTree = "<group>"; };
 		5389C5EB1CE52A0C007C1F6C /* UIViewController+TransitionHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+TransitionHandler.m"; sourceTree = "<group>"; };
-		5389C5F01CE5DB9D007C1F6C /* MAModuleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MAModuleViewController.h; sourceTree = "<group>"; };
-		5389C5F11CE5DB9D007C1F6C /* MAModuleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAModuleViewController.m; sourceTree = "<group>"; };
+		5389C5F01CE5DB9D007C1F6C /* APLModuleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APLModuleViewController.h; sourceTree = "<group>"; };
+		5389C5F11CE5DB9D007C1F6C /* APLModuleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APLModuleViewController.m; sourceTree = "<group>"; };
 		5389C5F41CE5E7F0007C1F6C /* UIViewController+APLKeyboardHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+APLKeyboardHandler.h"; sourceTree = "<group>"; };
 		5389C5F51CE5E7F0007C1F6C /* UIViewController+APLKeyboardHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+APLKeyboardHandler.m"; sourceTree = "<group>"; };
 		53D79B8C1CE2543E007AD071 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		53D79B8D1CE25DE9007AD071 /* MAAppAssembly.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MAAppAssembly.h; sourceTree = "<group>"; };
 		53D79B8E1CE25DE9007AD071 /* MAAppAssembly.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAAppAssembly.m; sourceTree = "<group>"; };
-		53D79B951CE26044007AD071 /* MAModuleAssembly.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MAModuleAssembly.h; sourceTree = "<group>"; };
-		53D79B961CE26044007AD071 /* MAModuleAssembly.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAModuleAssembly.m; sourceTree = "<group>"; };
+		53D79B951CE26044007AD071 /* APLModuleAssembly.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APLModuleAssembly.h; sourceTree = "<group>"; };
+		53D79B961CE26044007AD071 /* APLModuleAssembly.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APLModuleAssembly.m; sourceTree = "<group>"; };
 		54EFEC399145FFD9F8368F51 /* MAHistoryRouter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = MAHistoryRouter.m; sourceTree = "<group>"; };
 		5BB24FE0A07CC39D1669C10C /* MASearchViewOutput.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = MASearchViewOutput.h; sourceTree = "<group>"; };
 		5EAF1A3CEFDD80D24414A53A /* MAHistoryAssembly.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = MAHistoryAssembly.h; sourceTree = "<group>"; };
@@ -476,13 +481,17 @@
 		53D79B941CE2602D007AD071 /* Base */ = {
 			isa = PBXGroup;
 			children = (
-				53D79B951CE26044007AD071 /* MAModuleAssembly.h */,
-				53D79B961CE26044007AD071 /* MAModuleAssembly.m */,
-				5389C5E91CE5297E007C1F6C /* MARouterTransitionHandler.h */,
+				53D79B951CE26044007AD071 /* APLModuleAssembly.h */,
+				53D79B961CE26044007AD071 /* APLModuleAssembly.m */,
+				5389C5E91CE5297E007C1F6C /* APLRouterTransitionHandler.h */,
 				5389C5EA1CE52A0C007C1F6C /* UIViewController+TransitionHandler.h */,
 				5389C5EB1CE52A0C007C1F6C /* UIViewController+TransitionHandler.m */,
-				5389C5F01CE5DB9D007C1F6C /* MAModuleViewController.h */,
-				5389C5F11CE5DB9D007C1F6C /* MAModuleViewController.m */,
+				5389C5F01CE5DB9D007C1F6C /* APLModuleViewController.h */,
+				5389C5F11CE5DB9D007C1F6C /* APLModuleViewController.m */,
+				5344F32B1CE865CE00139D52 /* APLModuleInput.h */,
+				5344F32C1CE865F300139D52 /* APLModuleOutput.h */,
+				5344F32D1CE866D900139D52 /* APLOpenModulePromise.h */,
+				5344F32E1CE866D900139D52 /* APLOpenModulePromise.m */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -743,10 +752,10 @@
 				5389C5E51CE51E04007C1F6C /* MAHistoryItemCellObject.m in Sources */,
 				5363BDB11CE1F546007CAEAC /* APLPageControl.m in Sources */,
 				5389C5CA1CE50A81007C1F6C /* MAServiceComponentsAssembly.m in Sources */,
-				5389C5F21CE5DB9D007C1F6C /* MAModuleViewController.m in Sources */,
+				5389C5F21CE5DB9D007C1F6C /* APLModuleViewController.m in Sources */,
 				5363BDE21CE1F98B007CAEAC /* MAHistoryItemPonso.m in Sources */,
 				5363BDB51CE1F546007CAEAC /* NSObject+APL.m in Sources */,
-				53D79B971CE26044007AD071 /* MAModuleAssembly.m in Sources */,
+				53D79B971CE26044007AD071 /* APLModuleAssembly.m in Sources */,
 				5363BDB31CE1F546007CAEAC /* APLView.m in Sources */,
 				5363BD841CE1ED7F007CAEAC /* AppDelegate.m in Sources */,
 				5363BDB81CE1F546007CAEAC /* UIColor+APL.m in Sources */,
@@ -756,6 +765,7 @@
 				F9839424819C4AB2E25635D2 /* MASearchAssembly.m in Sources */,
 				48AB507657B7B282B370CD34 /* MASearchViewController.m in Sources */,
 				5389C5DB1CE5131D007C1F6C /* MASearchResultCell.m in Sources */,
+				5344F32F1CE866D900139D52 /* APLOpenModulePromise.m in Sources */,
 				5344F3271CE76AFB00139D52 /* MAHistoryItemObject+Ponso.m in Sources */,
 				5BFB20E6FEB8A35D7B398924 /* MASearchPresenter.m in Sources */,
 				C82DC4F28C43436A2390D8C6 /* MASearchInteractor.m in Sources */,

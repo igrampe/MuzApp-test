@@ -8,12 +8,14 @@
 
 
 #import "MASearchRouterInput.h"
-#import "MARouterTransitionHandler.h"
+#import "APLRouterTransitionHandler.h"
 
-@protocol MARouterTransitionHandler;
+@protocol APLRouterTransitionHandler;
+@protocol APLModuleOutput;
 
 @interface MASearchRouter : NSObject <MASearchRouterInput>
 
-@property (nonatomic, weak) id<MARouterTransitionHandler> transitionHandler;
+@property (nonatomic, weak) id<APLRouterTransitionHandler> transitionHandler;
+@property (nonatomic, strong) id<APLModuleOutput> presenter;
 
 @end

@@ -13,6 +13,8 @@
 #import "MAHistoryInteractorInput.h"
 #import "MAHistoryRouterInput.h"
 
+#import "MAHistoryItemPonso.h"
+
 @interface MAHistoryPresenter ()
 
 @property (nonatomic, strong) NSArray *historyItems;
@@ -29,6 +31,12 @@
 {
     [self _reloadHistoryItems];
     [self.view updateWithHistoryItems:self.historyItems];
+}
+
+- (void)actionDidSelectItemAtIndex:(NSInteger)index
+{
+    MAHistoryItemPonso *item = self.historyItems[index];
+    [self.moduleOutput historyModuleDidSelectHistoryItemWithQuery:item.query];
 }
 
 #pragma mark - MAHistoryInteractorOutput

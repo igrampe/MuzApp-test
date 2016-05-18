@@ -7,7 +7,9 @@
 //
 
 #import "UIViewController+TransitionHandler.h"
+
 #import <objc/runtime.h>
+#import "APLOpenModulePromise.h"
 
 @implementation UIViewController (TransitionHandler)
 
@@ -18,7 +20,22 @@
     [self swizzlePrepareForSegue];
 }
 
-- (void)openModuleUsingSegue:(NSString *)segueIdentifier transitionBlock:(ModuleTransitionBlock)transitionBlock
+- (APLOpenModulePromise *)openModuleUsingSegue:(NSString*)segueIdentifier
+                           withTransitionBlock:(APLModuleTransitionBlock)transitionBlock
+{
+    if ([self respondsToSelector:@selector(setTransitionBlock:)])
+    {
+        self.transitionBlock = transitionBlock;
+    }
+    APLOpenModulePromise *openModulePromise = [[APLOpenModulePromise alloc] init];
+    dispatch_async(dispatch_get_main_queue(),^
+    {
+        [self performSegueWithIdentifier:segueIdentifier sender:openModulePromise];
+    });
+    return openModulePromise;
+}
+
+- (void)openModuleUsingSegue:(NSString *)segueIdentifier transitionBlock:(APLModuleTransitionBlock)transitionBlock
 {
     if ([self respondsToSelector:@selector(setTransitionBlock:)])
     {
@@ -80,6 +97,21 @@
             self.transitionBlock(segue.sourceViewController, segue.destinationViewController);
         }
     }
+    
+    if (![sender isKindOfClass:[APLOpenModulePromise class]]) {
+        return;
+    }
+    
+    id<APLModuleInput> moduleInput = nil;
+    
+    id<APLRouterTransitionHandler> targetModuleTransitionHandler = segue.destinationViewController;
+    if ([targetModuleTransitionHandler respondsToSelector:@selector(moduleInput)])
+    {
+        moduleInput = [targetModuleTransitionHandler moduleInput];
+    }
+    
+    APLOpenModulePromise *openModulePromise = sender;
+    openModulePromise.moduleInput = moduleInput;
 }
 
 - (void)vc_prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender

@@ -1,5 +1,5 @@
 //
-//  MAModuleViewController.h
+//  APLModuleViewController.h
 //  MuzAppTest
 //
 //  Created by Semyon Belokovsky on 13/05/16.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MAModuleViewController : UIViewController
+@interface APLModuleViewController : UIViewController
 
 @end

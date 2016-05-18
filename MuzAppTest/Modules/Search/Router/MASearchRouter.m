@@ -10,10 +10,11 @@
 #import "MASearchRouter.h"
 
 #import "MAHistoryViewController.h"
+#import "APLOpenModulePromise.h"
 
 @interface MASearchRouter ()
 
-@property (nonatomic, strong) id<MARouterTransitionHandler> historyModuleTransitionHandler;
+@property (nonatomic, strong) id<APLRouterTransitionHandler> historyModuleTransitionHandler;
 
 @end
 
@@ -27,12 +28,17 @@
     if (!self.historyModuleTransitionHandler)
     {
         __weak typeof(self) welf = self;
-        [self.transitionHandler openModuleUsingSegue:@"OpenHistory" transitionBlock:
-         ^(id<MARouterTransitionHandler> sourceModuleTransitionHandler,
-           id<MARouterTransitionHandler> destinationModuleTransitionHandler)
-         {
-             welf.historyModuleTransitionHandler = destinationModuleTransitionHandler;
-         }];
+        
+        [[self.transitionHandler openModuleUsingSegue:@"OpenHistory"
+                                  withTransitionBlock:
+          ^(id<APLRouterTransitionHandler> sourceModuleTransitionHandler,
+            id<APLRouterTransitionHandler> destinationModuleTransitionHandler)
+        {
+            welf.historyModuleTransitionHandler = destinationModuleTransitionHandler;
+        }] linkUsingBlock:^id<APLModuleOutput>(id<APLModuleInput> moduleInput)
+        {
+            return welf.presenter;
+        }];
     }
 }
 

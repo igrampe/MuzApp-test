@@ -27,6 +27,7 @@
 @implementation MAHistoryViewController
 
 @synthesize hasKeyboard;
+@synthesize moduleInput;
 
 #pragma mark - Lifecycle
 
@@ -53,6 +54,24 @@
     [super viewWillAppear:animated];
     [self keyboardUpdate];
     [self.output viewWillAppear];
+}
+
+#pragma mark - APLRouterTransitionHandler
+
+- (void)closeModule
+{
+    __weak typeof(self) welf = self;
+    [UIView animateWithDuration:0.25
+                     animations:
+     ^
+    {
+        welf.view.alpha = 0;
+    } completion:^(BOOL finished)
+    {
+        [self.view removeFromSuperview];
+        [self removeFromParentViewController];
+    }];
+    
 }
 
 #pragma mark - MAHistoryViewInput
@@ -85,6 +104,8 @@
     return cell;
 }
 
+#pragma mark - UITableViewDelegate
+
 - (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if ([cell isKindOfClass:[MAHistoryItemCell class]])
@@ -94,6 +115,12 @@
         MAHistoryItemCellObject *object = self.historyItems[indexPath.row];
         [c configureWithObject:object];
     }
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    [self.output actionDidSelectItemAtIndex:indexPath.row];
 }
 
 #pragma mark - Mock

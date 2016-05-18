@@ -1,5 +1,5 @@
 //
-//  MAModuleAssembly.h
+//  APLModuleAssembly.h
 //  MuzAppTest
 //
 //  Created by Semyon Belokovsky on 10/05/16.
@@ -10,7 +10,7 @@
 
 #import "MAServiceComponents.h"
 
-@interface MAModuleAssembly : TyphoonAssembly
+@interface APLModuleAssembly : TyphoonAssembly
 
 @property (strong, nonatomic, readonly) TyphoonAssembly <MAServiceComponents> *serviceComponents;
 

@@ -23,6 +23,8 @@
     {
         [definition injectProperty:@selector(output)
                               with:[self presenterHistory]];
+        [definition injectProperty:@selector(moduleInput)
+                              with:[self presenterHistory]];
     }];
 }
 

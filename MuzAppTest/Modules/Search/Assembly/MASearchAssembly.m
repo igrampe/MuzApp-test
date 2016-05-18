@@ -66,6 +66,8 @@
     {
         [definition injectProperty:@selector(transitionHandler)
                               with:[self viewSearch]];
+        [definition injectProperty:@selector(presenter)
+                              with:[self presenterSearch]];
     }];
 }
 

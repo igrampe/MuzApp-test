@@ -16,7 +16,8 @@
 @protocol MASearchInteractorInput;
 @protocol MASearchRouterInput;
 
-@interface MASearchPresenter : NSObject <MASearchModuleInput, MASearchViewOutput, MASearchInteractorOutput>
+@interface MASearchPresenter : NSObject
+<MASearchModuleInput, MASearchViewOutput, MASearchInteractorOutput>
 
 @property (nonatomic, weak) id<MASearchViewInput> view;
 @property (nonatomic, strong) id<MASearchInteractorInput> interactor;

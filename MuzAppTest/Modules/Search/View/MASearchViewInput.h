@@ -14,11 +14,11 @@
 - (void)updateWithSearchResults:(NSArray *)searchResults;
 - (void)showLoader;
 - (void)hideLoader;
-- (void)showResults;
-- (void)hideResults;
 - (void)showErrorWithMessage:(NSString *)message;
 - (void)showNoResults;
 - (void)scrollToTop;
+- (void)setSearchBarText:(NSString *)text;
+- (void)hideKeyboard;
 
 - (NSString *)valueSearchBarText;
 

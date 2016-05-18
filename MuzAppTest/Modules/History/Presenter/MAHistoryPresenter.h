@@ -21,6 +21,6 @@
 @property (nonatomic, weak) id<MAHistoryViewInput> view;
 @property (nonatomic, strong) id<MAHistoryInteractorInput> interactor;
 @property (nonatomic, strong) id<MAHistoryRouterInput> router;
-@property (nonatomic, weak) id<MAHistoryModuleOutput> output;
+@property (nonatomic, weak) id<MAHistoryModuleOutput> moduleOutput;
 
 @end

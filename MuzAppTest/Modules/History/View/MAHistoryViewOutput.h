@@ -12,5 +12,6 @@
 @protocol MAHistoryViewOutput <NSObject>
 
 - (void)viewWillAppear;
+- (void)actionDidSelectItemAtIndex:(NSInteger)index;
 
 @end

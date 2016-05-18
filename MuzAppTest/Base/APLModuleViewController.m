@@ -1,20 +1,19 @@
 //
-//  MAModuleViewController.m
+//  APLModuleViewController.m
 //  MuzAppTest
 //
 //  Created by Semyon Belokovsky on 13/05/16.
 //  Copyright © 2016 igrampe. All rights reserved.
 //
 
-#import "MAModuleViewController.h"
-
+#import "APLModuleViewController.h"
 #import "UIViewController+TransitionHandler.h"
 
-@interface MAModuleViewController ()
+@interface APLModuleViewController ()
 
 @end
 
-@implementation MAModuleViewController
+@implementation APLModuleViewController
 
 @synthesize transitionBlock;
 

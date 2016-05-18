@@ -7,8 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "MARouterTransitionHandler.h"
+#import "APLRouterTransitionHandler.h"
 
-@interface UIViewController (TransitionHandler) <MARouterTransitionHandler>
+@interface UIViewController (TransitionHandler) <APLRouterTransitionHandler>
 
 @end

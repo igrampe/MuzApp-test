@@ -7,8 +7,8 @@
 //
 
 
-#import "MAModuleAssembly.h"
+#import "APLModuleAssembly.h"
 
-@interface MAHistoryAssembly : MAModuleAssembly
+@interface MAHistoryAssembly : APLModuleAssembly
 
 @end
