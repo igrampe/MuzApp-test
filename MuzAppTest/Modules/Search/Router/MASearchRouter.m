@@ -26,8 +26,8 @@
 
 - (void)openHistoryModule
 {
-    
-    if (!self.historyModuleTransitionHandler)
+    if (!self.historyModuleTransitionHandler &&
+        !self.transitionHandler.inTransition)
     {
         __weak typeof(self) welf = self;
         

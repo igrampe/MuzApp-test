@@ -19,6 +19,7 @@
 - (void)scrollToTop;
 - (void)setSearchBarText:(NSString *)text;
 - (void)hideKeyboard;
+- (void)setCancelButtonHidden:(BOOL)hidden;
 
 - (NSString *)valueSearchBarText;
 

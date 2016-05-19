@@ -15,6 +15,7 @@
 #import "MASearchResultCellObject.h"
 
 #import "UIViewController+APLKeyboardHandler.h"
+#import "UIViewController+TransitionHandler.h"
 
 @interface MASearchViewController () <UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate>
 
@@ -30,6 +31,7 @@
 @implementation MASearchViewController
 
 @synthesize hasKeyboard;
+@synthesize inTransition;
 
 #pragma mark - Lifecycle
 
@@ -114,6 +116,11 @@
     [self.searchBar resignFirstResponder];
 }
 
+- (void)setCancelButtonHidden:(BOOL)hidden
+{
+    [self.searchBar setShowsCancelButton:!hidden animated:YES];
+}
+
 #pragma mark -- Values
 
 - (NSString *)valueSearchBarText
@@ -170,6 +177,11 @@ forRowAtIndexPath:(NSIndexPath *)indexPath
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar
 {
     [self.output actionSearchBarSearch];
+}
+
+- (void)searchBarCancelButtonClicked:(UISearchBar *)searchBar
+{
+    [self.output actionCancel];
 }
 
 #pragma mark - Mock

@@ -155,10 +155,10 @@
             </objects>
             <point key="canvasLocation" x="827" y="358"/>
         </scene>
-        <!--Track-->
+        <!--Track View Controller-->
         <scene sceneID="bSF-1L-epv">
             <objects>
-                <viewController title="Track" id="i73-Bh-m9j" customClass="MATrackViewController" sceneMemberID="viewController">
+                <viewController id="i73-Bh-m9j" customClass="MATrackViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="wNS-Wv-QwV"/>
                         <viewControllerLayoutGuide type="bottom" id="xQn-Cg-ciI"/>

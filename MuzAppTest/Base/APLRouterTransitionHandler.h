@@ -26,5 +26,6 @@ typedef void (^APLModuleTransitionBlock)(id<APLRouterTransitionHandler> sourceMo
 - (void)vc_prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender;
 @property (nonatomic, copy) APLModuleTransitionBlock transitionBlock;
 @property (nonatomic, strong) id<APLModuleInput> moduleInput;
+@property (nonatomic, assign) BOOL inTransition;
 
 @end

@@ -16,5 +16,6 @@
 - (void)actionSearchBarTextDidChange;
 - (void)actionSearchBarSearch;
 - (void)actionDidSelectItemAtIndex:(NSInteger)index;
+- (void)actionCancel;
 
 @end

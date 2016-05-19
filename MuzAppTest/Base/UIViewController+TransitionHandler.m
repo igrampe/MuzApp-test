@@ -14,6 +14,7 @@
 @implementation UIViewController (TransitionHandler)
 
 @dynamic transitionBlock;
+@dynamic inTransition;
 
 + (void)initialize
 {
@@ -23,6 +24,10 @@
 - (APLOpenModulePromise *)openModuleUsingSegue:(NSString*)segueIdentifier
                            withTransitionBlock:(APLModuleTransitionBlock)transitionBlock
 {
+    if ([self respondsToSelector:@selector(setInTransition:)])
+    {
+        self.inTransition = YES;
+    }
     if ([self respondsToSelector:@selector(setTransitionBlock:)])
     {
         self.transitionBlock = transitionBlock;
@@ -112,6 +117,11 @@
     
     APLOpenModulePromise *openModulePromise = sender;
     openModulePromise.moduleInput = moduleInput;
+    
+    if ([self respondsToSelector:@selector(setInTransition:)])
+    {
+        self.inTransition = NO;
+    }
 }
 
 - (void)vc_prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender

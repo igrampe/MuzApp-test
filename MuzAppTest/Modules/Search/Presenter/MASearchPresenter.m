@@ -37,10 +37,8 @@
 
 - (void)actionSearchBarActivate
 {
-    if ([self.view valueSearchBarText].length == 0)
-    {
-        [self.router openHistoryModule];
-    }
+    [self.router openHistoryModule];
+    [self.view setCancelButtonHidden:NO];
 }
 
 - (void)actionSearchBarTextDidChange
@@ -56,6 +54,7 @@
 
 - (void)actionSearchBarSearch
 {
+    [self.router closeHistoryModule];
     [self _perfromSearch];
 }
 
@@ -66,6 +65,13 @@
         MATrackPonso *track = self.tracks[index];
         [self.router openTrackModuleWithTrackId:track.trackId];
     }
+}
+
+- (void)actionCancel
+{
+    [self.router closeHistoryModule];
+    [self.view hideKeyboard];
+    [self.view setCancelButtonHidden:YES];
 }
 
 #pragma mark - MASearchInteractorOutput
@@ -114,10 +120,10 @@
     MAHistoryItemPonso *item = [MAHistoryItemPonso objectWithQuery:query date:[NSDate date]];
     [self.interactor dbAddHistoryItem:item];
     
+    [self.view setCancelButtonHidden:YES];
     [self.view hideKeyboard];
     [self.view showLoader];
     [self.interactor apiSearchWithQuery:query offset:0];
-    
 }
 
 @end
